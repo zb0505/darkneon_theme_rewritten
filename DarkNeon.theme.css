@@ -24,7 +24,7 @@
   --bg-image: url("https://wallpaperaccess.com/full/44211.jpg"); /* Background image */
   --bg-image-darken: #000000aa; /* Darkening the background image */
   --online-color: #39ff14; /* The color used in the "online" user status symbol */
-  --afk-color: #e0ce2e; /* The color used in the "idle" user status symbol */
+  --afk-color: #ffec3d; /* The color used in the "idle" user status symbol */
   --dnd-color: #FF0000; /* The color used in the "do not disturb" user status symbol */
   --streaming-color: #bc13fe; /* The color used in the "streaming X" user status symbol */
   --background: #00000000; /* Transparent background color to make the background image visible */
@@ -644,14 +644,22 @@ code {
 /* --== Style the online/afk/dnd icons ==-- */
 
 /* --== THIS PART WAS YOINKED FROM _DAVID_! THANKS DAVID! ==-- */
-#app-mount .wrapper-3t9DeA rect[fill="#593695"],
+/* Streaming */
+#app-mount .wrapper-3t9DeA rect[fill="hsl(262, calc(var(--saturation-factor, 1) * 46.8%), 39.8%)"],
 #app-mount .wrapper-3t9DeA rect[mask*=streaming] {fill: var(--streaming-color)}
-#app-mount .wrapper-3t9DeA rect[fill="#3ba55c"],
+#status-picker .status-1AY8sU[style="background-color: hsl(262, calc(var(--saturation-factor, 1) * 46.8%), 39.8%);"] {background-color: var(--streaming-color) !important}
+/* Online */
+#app-mount .wrapper-3t9DeA rect[fill="hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%)"],
 #app-mount .wrapper-3t9DeA rect[mask*=online] {fill: var(--online-color)}
-#app-mount .wrapper-3t9DeA rect[fill="#faa61a"],
+#status-picker .status-1AY8sU[style="background-color: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%);"] {background-color: var(--online-color) !important}
+/* Idle */
+#app-mount .wrapper-3t9DeA rect[fill="hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 54.1%)"],
 #app-mount .wrapper-3t9DeA rect[mask*=idle] {fill: var(--afk-color)}
-#app-mount .wrapper-3t9DeA rect[fill="#ed4245"],
+#status-picker .status-1AY8sU[style="background-color: hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 54.1%);"] {background-color: var(--afk-color) !important}
+/* DND */
+#app-mount .wrapper-3t9DeA rect[fill="hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%)"],
 #app-mount .wrapper-3t9DeA rect[mask*=dnd] {fill: var(--dnd-color)}
+#status-picker .status-1AY8sU[style="background-color: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%);"] {background-color: var(--dnd-color) !important}
 
 /* --== Style right click list ==-- */
 .scroller-3BxosC {
