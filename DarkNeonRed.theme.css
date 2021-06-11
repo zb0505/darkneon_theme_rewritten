@@ -23,7 +23,7 @@
   --bg-image: url("https://image.freepik.com/free-photo/galaxy-space-background_5208-1.jpg") !important; /* Background image */
   --bg-image-darken: #000000aa !important; /* Darkening the background image */
   --online-color: #39ff14 !important; /* The color used in the "online" user status symbol */
-  --afk-color: #e0ce2e !important; /* The color used in the "idle" user status symbol */
+  --afk-color: #ffec3d !important; /* The color used in the "idle" user status symbol */
   --dnd-color: #FF0000 !important; /* The color used in the "do not disturb" user status symbol */
   --streaming-color: #bc13fe !important; /* The color used in the "streaming X" user status symbol */
   --background: #00000000 !important; /* Transparent background color to make the background image visible */
