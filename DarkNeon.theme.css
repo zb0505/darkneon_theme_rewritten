@@ -264,6 +264,11 @@ code {
 	border: 1px solid black;
 }
 
+/* Background of loading icon when going offline */
+.container-16j22k.fixClipping-3qAKRb {
+	background-color: var(--background-options);
+}
+
 
 /* Main css file (the commented import in the beginning) */
 @import url('https://commandcrafterhd.github.io/DiscordDarkNeon/css/usertags.css');
