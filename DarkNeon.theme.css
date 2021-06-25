@@ -306,6 +306,7 @@ code {
 	background-position: var(--user-popout-position) center;
 	background-image: var(--user-background);
 	-webkit-mask-image: linear-gradient(#000, transparent);
+	mask-image: linear-gradient(#000, transparent);
 }
 
 .userPopout-3XzG_A  .header-2BwW8b,
@@ -332,6 +333,7 @@ code {
   pointer-events: none;
   background: var(--user-background) center/cover no-repeat;
   -webkit-mask: linear-gradient(black, transparent 80%);
+  mask: linear-gradient(black, transparent 80%);
 }
 
 .headerInfo-30uryT,
@@ -521,12 +523,16 @@ code {
   background-color: var(--highlight);
 }
 
+.mentioned-xhSam7:hover:before {
+  background-color: rgba(var(--rgb-highlight), 0.5);
+}
+
 .mentioned-xhSam7 {
   background: linear-gradient(90deg, rgba(var(--rgb-highlight), 0.4) 0%, rgba(var(--rgb-highlight), 0) 100%);
 }
 
 .mentioned-xhSam7:hover {
-  background: linear-gradient(90deg, rgba(var(--rgb-highlight), 0.4) 0%, rgba(var(--rgb-highlight), 0) 100%) !important;
+  background: linear-gradient(90deg, rgba(var(--rgb-highlight), 0.2) 0%, rgba(var(--rgb-highlight), 0) 100%) !important;
 }
 
 .wrapper-3WhCwL {
