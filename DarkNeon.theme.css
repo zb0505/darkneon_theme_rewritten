@@ -244,6 +244,7 @@ code {
 /* Background of popouts and headers */
 .recentMentionsPopout-3rCiI6, .channelHeader-3Gd2xq, .header-2mZ9Ov {
 	background-color: var(--background-popouts) !important;
+	border-radius: 8px;
 }
 
 /* Background of user popouts */
