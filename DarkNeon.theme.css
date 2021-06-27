@@ -247,12 +247,16 @@ code {
 	border-radius: 8px;
 }
 
-/* Background of user popouts */
-.avatar-37jOim {
+/* Background of user popouts and profile preview in settings */
+.avatar-37jOim, .avatarUploaderInner-Oiob_P {
 	border: 6px solid var(--background-main) !important;
+	background-color: transparent;
 }
-.avatar-37jOim, .headerNormal-1mX3KY, .headerTop-2cWpdB, .body-3HBlXn, .footer-1N3bR3 {
+.userPopout-xaxa6l, .profileBannerPreview-3_l0Wd {
 	background-color: var(--background-main) !important;
+}
+.userPopout-xaxa6l > div, .bodyInnerWrapper-26fQXj, .profileBannerPreview-3_l0Wd > div {
+	background-color: transparent;
 }
 
 /* Selected item color fix */
@@ -268,6 +272,36 @@ code {
 /* Background of loading icon when going offline */
 .container-16j22k.fixClipping-3qAKRb {
 	background-color: var(--background-options);
+}
+
+/* Background of connections in settings and code redemption hint */
+.connection-1fbD7X, .theme-dark .codeRedemptionRedirect-1wVR4b {
+	background-color: var(--background-popouts);
+}
+.theme-dark .codeRedemptionRedirect-1wVR4b {
+	border-color: var(--background-popouts);
+}
+
+/* Background of microphone and speaker chooser menus in settings */
+.css-3vaxre-menu {
+	background-color: var(--background-options);
+	border-color: var(--background-options);
+}
+.css-3vaxre-menu > div > div:hover {
+	background-color: var(--msg-hover);
+}
+
+/* Background of video preview in settings */
+.userSettingsVoice-iwdUCU .previewContainer-37c2Si {
+	background-color: var(--background-popouts);
+}
+.userSettingsVoice-iwdUCU .previewContainer-37c2Si > div {
+	background-color: transparent !important;
+}
+
+/* Background of not detected game in settings */
+.theme-dark .notDetected-33MY4s, .theme-light .notDetected-33MY4s {
+	background-color: var(--background-popouts);
 }
 
 
