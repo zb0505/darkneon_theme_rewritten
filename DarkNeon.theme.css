@@ -304,6 +304,14 @@ code {
 	background-color: var(--background-popouts);
 }
 
+/* Background of role popouts */
+.container-3XJ8ns[role="dialog"] {
+	background-color: var(--background-options);
+}
+.container-3XJ8ns[role="dialog"] .content-3YMskv {
+	background-color: transparent !important;
+}
+
 
 /* Main css file (the commented import in the beginning) */
 @import url('https://commandcrafterhd.github.io/DiscordDarkNeon/css/usertags.css');
