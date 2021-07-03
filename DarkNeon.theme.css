@@ -282,7 +282,10 @@ code {
 	border-color: var(--background-popouts);
 }
 
-/* Background of microphone and speaker chooser menus in settings */
+/* Background of dropdown menus in settings */
+.select-2TCrqx {
+	background-color: var(--background-options);
+}
 .css-3vaxre-menu {
 	background-color: var(--background-options);
 	border-color: var(--background-options);
@@ -310,6 +313,46 @@ code {
 }
 .container-3XJ8ns[role="dialog"] .content-3YMskv {
 	background-color: transparent !important;
+}
+
+/* Background of tooltips */
+.subscribeTooltipWrapper-1JoUuw {
+	background-color: var(--background-options);
+}
+.subscribeTooltipWrapper-1JoUuw:after {
+	border-bottom: 8px solid var(--background-options);
+}
+
+/* Color server tiers */
+.theme-dark .tierHeaderLocked-3S508x {
+	background-color: var(--background-options);
+}
+.theme-dark .tierBody-3aUxuc {
+	background-color: var(--background-popouts);
+}
+.tier-2c9-hT {
+	background-color: var(--highlight) !important;
+}
+.tier-2c9-hT.tierInProgress-3mBoXq {
+	background-color: var(--background-main) !important;
+}
+/* Server boost status bar */
+.foreground-2EIns2 {
+	color: var(--highlight);
+}
+.theme-dark .background-3xPPFc {
+	color: var(--background-main);
+}
+
+/* Everyone role color fix */
+.side-8zPYf6 .themed-OHr7kt.selected-3s45Ha.item-PXvHYJ .roleName-2IkRdr {
+	color: var(--background-main);
+}
+
+/* White buttons hover fix */
+.theme-dark .lookOutlined-3sRXeN.colorPrimary-3b3xI6:hover {
+	background-color: white;
+	color: var(--background-main);
 }
 
 
