@@ -360,6 +360,11 @@ code {
 	background-color: var(--background-main);
 }
 
+/* Background of thoughts popout */
+.popout-APcvZm, .modal-2DCYwU {
+	background-color: var(--background-options) !important;
+}
+
 
 /* Main css file (the commented import in the beginning) */
 @import url('https://commandcrafterhd.github.io/DiscordDarkNeon/css/usertags.css');
