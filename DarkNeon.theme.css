@@ -836,6 +836,10 @@ code {
 	background-color: unset;
 }
 
+.bd-switch input:checked + .bd-switch-body .bd-switch-symbol path {
+	fill: var(--highlight);
+}
+
 .bd-setting-item .bd-select:hover {
 	border: 1px solid var(--highlight);
 }
