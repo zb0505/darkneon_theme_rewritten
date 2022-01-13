@@ -1,5 +1,5 @@
 /**
- * @name Dark Neon Red
+ * @name Dark Neon Green
  * @author xy0505#8248
  * @version 1.0.0
  * @source https://gitlab.com/CommandCrafterHD/bates-discord-theme
@@ -18,9 +18,9 @@
 
 /* CUSTOMIZE COLORS IN HERE! */
 :root {
-  --accent-color: rgb(255, 4, 4) !important; /* Main accent color */
-  --accent-color-rgb: 255, 4, 4 !important; /* Main accent color in RGB values */
-  --bg-image: url("https://wallpapercave.com/wp/wp2793079.jpg") !important; /* Background image */
+  --accent-color: rgb(4, 255, 4) !important; /* Main accent color */
+  --accent-color-rgb: 4, 255, 4 !important; /* Main accent color in RGB values */
+  --bg-image: url("https://wallpapercave.com/wp/wp2566070.jpg") !important; /* Background image */
   --bg-image-darken: #000000aa !important; /* Darkening the background image */
   --online-color: #39ff14 !important; /* The color used in the "online" user status symbol */
   --afk-color: #ffec3d !important; /* The color used in the "idle" user status symbol */
