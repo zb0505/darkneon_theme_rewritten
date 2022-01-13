@@ -20,7 +20,7 @@
 :root {
   --accent-color: rgb(255, 4, 4) !important; /* Main accent color */
   --accent-color-rgb: 255, 4, 4 !important; /* Main accent color in RGB values */
-  --bg-image: url("https://image.freepik.com/free-photo/galaxy-space-background_5208-1.jpg") !important; /* Background image */
+  --bg-image: url("https://wallpapercave.com/wp/wp2793079.jpg") !important; /* Background image */
   --bg-image-darken: #000000aa !important; /* Darkening the background image */
   --online-color: #39ff14 !important; /* The color used in the "online" user status symbol */
   --afk-color: #ffec3d !important; /* The color used in the "idle" user status symbol */
@@ -30,6 +30,7 @@
   --background-main: black !important; /* The main background color */
   --background-options: #000000ce !important; /* Background color of options (right-click menus) */
   --background-popouts: #000000af !important; /* Background color of popouts like pinned messages and emoji picker (and a plus layer for options) */
+  --background-tooltips: #141414ee !important; /* Background color of tooltips */
   --icon-background:  #202020 !important; /* Color of server icon backgrounds */
   --code-background: #181818 !important; /* Background color of code blocks */
   --embed-background: #111111 !important; /* Background color of embeds */

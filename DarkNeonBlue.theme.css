@@ -30,6 +30,7 @@
 	--background-main: black !important; /* The main background color */
 	--background-options: #000000ce !important; /* Background color of options (right-click menus) */
 	--background-popouts: #000000af !important; /* Background color of popouts like pinned messages and emoji picker (and a plus layer for options) */
+	--background-tooltips: #141414ee !important; /* Background color of tooltips */
 	--icon-background:  #202020 !important; /* Color of server icon backgrounds */
 	--code-background: #181818 !important; /* Background color of code blocks */
 	--embed-background: #111111 !important; /* Background color of embeds */
