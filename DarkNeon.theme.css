@@ -207,9 +207,9 @@ code {
 }
 
 /* Background of unread button */
-.unread-1xRYoj {
-	background-color: var(--background-main) !important;
-	border: 1px solid #333333;
+.unread-2wipsx {
+	background-color: var(--background-options) !important;
+	border: 1px solid #202020;
 }
 
 /* Background of GIF and emoji picker */
