@@ -261,14 +261,14 @@ code {
 }
 
 /* Background of user popouts and profile preview in settings */
-.avatarUploaderInner-Oiob_P, .avatar-2Vndt_, .avatar-3QF_VA {
+.avatarUploaderInner-p38nm2, .avatar-2Vndt_, .avatar-3QF_VA {
 	border: 6px solid var(--background-main) !important;
 	background-color: transparent;
 }
-.userPopout-2j1gM4, .profileBannerPreview-3_l0Wd {
+.userPopout-2j1gM4, .profileBannerPreview-3mLIdO {
 	background-color: var(--background-main) !important;
 }
-.userPopout-2j1gM4 > div, .bodyInnerWrapper-2bQs1k, .profileBannerPreview-3_l0Wd > div {
+.userPopout-2j1gM4 > div, .bodyInnerWrapper-2bQs1k, .profileBannerPreview-3mLIdO > div {
 	background-color: transparent;
 }
 .body-1Ukv50, .topSection-13QKHs {
@@ -286,15 +286,15 @@ code {
 }
 
 /* Background of loading icon when going offline */
-.container-16j22k.fixClipping-3qAKRb {
+.container-2RRFHK.fixClipping-3GOd_d {
 	background-color: var(--background-options);
 }
 
-/* Background of connections in settings and code redemption hint */
-.connection-1fbD7X, .theme-dark .codeRedemptionRedirect-3SBiCp {
+/* Background of connections in settings and code redemption hint + other notes having similar style */
+.connection-1fbD7X, .theme-dark .codeRedemptionRedirect-2hYMSQ, .cardPrimary-3qRT__, .paymentBanner-1PHefn {
 	background-color: var(--background-popouts);
 }
-.theme-dark .codeRedemptionRedirect-3SBiCp {
+.theme-dark .codeRedemptionRedirect-2hYMSQ, .cardPrimary-3qRT__, .paymentBanner-1PHefn {
 	border-color: var(--background-popouts);
 }
 
@@ -564,7 +564,7 @@ code {
 }
 
 /* --== Style codeblocks and Markdown notation in Chat inputbox ==-- */
-.codeBlockSyntax-2MZ-Qy, .syntaxAfter-OxiKEl, .syntaxBefore-3pDAmR {
+.codeBlockSyntax-3mFGiA, .syntaxAfter-2_BrZf, .syntaxBefore-3epS3C {
 	color: var(--highlight);
 }
 
@@ -574,12 +574,12 @@ code {
 }
 
 /* --== Add some FANCY borders! ==-- */
-.scrollableContainer-15eg7h, .wrapper-2vIMkT, .quickswitcher-3JagVE,
+.scrollableContainer-15eg7h, .wrapper-2vIMkT, .quickswitcher-3JagVE, .bioTextArea-dDGOeC, .input-2g-os5:not(.note-Go5ZP2 > .input-2g-os5),
 .input-2XRLou, .markup-2BOw-j code, .theme-dark .uploadModal-2ifh8j {
 	border: 1px solid var(--highlight);
 }
 
-.input-2XRLou, .list-17lzo8, .wrapper-2vIMkT, .button-38aScr,
+.input-2XRLou, .list-17lzo8, .wrapper-2vIMkT, .button-38aScr, .bioTextArea-dDGOeC, .input-2g-os5:not(.note-Go5ZP2 > .input-2g-os5),
 .colorable-1bkp8v.primaryDark-3mSFDl, .colorable-1bkp8v.primaryDark-3mSFDl .centerIcon-2G6o-T,
 .theme-dark .uploadModal-2ifh8j, .uploadModal-2ifh8j .footer-3mqk7D.hasSpoilers-1IRtQC,
 .button-1YfofB.buttonColor-7qQbGO.buttonActive-3FrkXp,
@@ -810,7 +810,7 @@ code {
 .status-2DiCMd[style="background-color: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%);"] {background-color: var(--dnd-color) !important;}
 
 /* --== Style right click list ==-- */
-.scroller-1bVxF5 {
+.scroller-1bVxF5, .scroller-2MALzE {
 	border: 1px solid var(--highlight);
 	border-radius: 5px;
 	background-color: var(--background-options) !important;
@@ -949,23 +949,23 @@ code {
 }
 
 /* --== Style spoiler checkbox off of file upload modal ==-- */
-.theme-dark .checkbox-1ix_J3 {
+.theme-dark .checkbox-f1HnKB {
 	transition-duration: .3s;
 }
 
-.theme-dark .checkbox-1ix_J3.checked-3_4uQ9 {
+.theme-dark .checkbox-f1HnKB.checked-1pZh2h {
 	border-color: var(--highlight) !important;
 	background-color: var(--highlight) !important;
 	color: var(--background-main) !important;
 	}
 
-.theme-dark .checked-3_4uQ9 .da-checked {
+.theme-dark .checked-1pZh2h .da-checked {
 	border-color: var(--highlight) !important;
 	background-color: var(--highlight) !important;
 	color: var(--background-main) !important;
 }
 
-.theme-dark .checked-3_4uQ9 > svg > path {
+.theme-dark .checked-1pZh2h > svg > path {
 	fill: var(--background-main);
 }
 
