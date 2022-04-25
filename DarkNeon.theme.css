@@ -810,7 +810,7 @@ code {
 .status-2DiCMd[style="background-color: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%);"] {background-color: var(--dnd-color) !important;}
 
 /* --== Style right click list ==-- */
-.scroller-1bVxF5, .scroller-2MALzE {
+.scroller-1bVxF5, .submenuContainer-3EVTeH .scroller-2MALzE {
 	border: 1px solid var(--highlight);
 	border-radius: 5px;
 	background-color: var(--background-options) !important;
