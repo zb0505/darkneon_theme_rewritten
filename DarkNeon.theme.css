@@ -227,6 +227,7 @@ code {
 /* And premium promo */
 .notice-2HEN-u {
 	background-color: var(--background-popouts) !important;
+	color: white;
 }
 
 /* Background of server search popup */
