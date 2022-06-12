@@ -1,0 +1,42 @@
+/**
+ * @name Dark Neon Orange
+ * @author xy0505#8248
+ * @version 1.0.0
+ * @source https://gitlab.com/CommandCrafterHD/bates-discord-theme
+ * @website https://commandcrafterhd.gitlab.io/bates-discord-theme/
+ * @donate https://www.paypal.com/paypalme/floriancegledi
+ * @description A dark theme with bright neon-y colors and a fancy customizable background!
+ * @authorId 695564552246525962
+*/
+
+@import url('https://zb0505.github.io/darkneon_theme_rewritten/DarkNeon.theme.css');
+/* ^ This is the main Import ^ DO NOT TOUCH. Without this, the theme won't load!!! */
+
+/*@import url('https://commandcrafterhd.github.io/DiscordDarkNeon/css/hideUsers.css');
+/* ^ This import ^ Collapses the userlist in Servers and Groups, comment it out if you don't want that! */
+/* Also a big thank you to rmkx for letting me use some of their code for this, check out their "Boreal" theme! */
+
+/* CUSTOMIZE COLORS IN HERE! */
+:root {
+	--accent-color: rgb(255, 150, 4) !important; /* Main accent color */
+	--accent-color-rgb: 255, 150, 4 !important; /* Main accent color in RGB values */
+	--bg-image: url("https://wallpaperaccess.com/full/1578343.jpg") !important; /* Background image */
+	--bg-image-darken: #000000aa !important; /* Darkening the background image */
+	--online-color: #39ff14 !important; /* The color used in the "online" user status symbol */
+	--afk-color: #ffec3d !important; /* The color used in the "idle" user status symbol */
+	--dnd-color: #FF0000 !important; /* The color used in the "do not disturb" user status symbol */
+	--streaming-color: #bc13fe !important; /* The color used in the "streaming X" user status symbol */
+	--background: #00000000 !important; /* Transparent background color to make the background image visible */
+	--background-main: black !important; /* The main background color */
+	--background-options: #000000ce !important; /* Background color of options (right-click menus) */
+	--background-popouts: #000000af !important; /* Background color of popouts like pinned messages and emoji picker (and a plus layer for options) */
+	--background-tooltips: #141414ee !important; /* Background color of tooltips */
+	--icon-background:  #202020 !important; /* Color of server icon backgrounds */
+	--code-background: #181818 !important; /* Background color of code blocks */
+	--embed-background: #111111 !important; /* Background color of embeds */
+	--msg-hover: #30303038 !important; /* Color of a message when hovering it (putting the cursor over it) */
+  
+	/* --== Radial Status support ==-- */
+	--rs-offline-color: gray !important;
+	--rs-invisible-color: gray !important;
+}
