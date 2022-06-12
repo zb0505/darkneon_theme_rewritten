@@ -184,12 +184,12 @@ code {
 
 
 /* Border of reaction buttons */
-.reaction-2A2y9y {
+.reaction-3vwAF2 {
 	border: 1px solid #5e5e5e;
 }
 
 /* Hide outline of server container */
-.guilds-1SWlCJ ul {
+ul {
 	outline: none !important;
 }
 
@@ -325,10 +325,11 @@ code {
 }
 
 /* Background of role popouts */
-.container-3XJ8ns[role="dialog"] {
+.container-2O1UgZ[role="dialog"] {
 	background-color: var(--background-options);
+	border-color: var(--highlight);
 }
-.container-3XJ8ns[role="dialog"] .content-3YMskv {
+.container-2O1UgZ[role="dialog"] .content-3YMskv {
 	background-color: transparent !important;
 }
 
@@ -392,6 +393,11 @@ code {
 
 /* Style the option menus */
 .colorDefault-CDqZdO {
+	background-color: var(--background);
+}
+
+/* Background of Nitro menu on friends page */
+.applicationStore-2nk7Lo {
 	background-color: var(--background);
 }
 
@@ -531,7 +537,7 @@ code {
 	border-left: 3px solid var(--highlight);
 }
 
-.theme-dark .container-2cd8Mz, .peopleColumn-1wMU14 {
+.theme-dark .container-2cd8Mz, .peopleColumn-1wMU14, .container-ZMc96U.themed-Hp1KC_ {
 	background-color: var(--background);
 }
 
@@ -575,16 +581,16 @@ code {
 }
 
 /* --== Add some FANCY borders! ==-- */
-.scrollableContainer-15eg7h, .wrapper-2vIMkT, .quickswitcher-3JagVE, .bioTextArea-dDGOeC, .input-2g-os5:not(.note-Go5ZP2 > .input-2g-os5),
-.input-2XRLou, .markup-2BOw-j code, .theme-dark .uploadModal-2ifh8j {
+.scrollableContainer-15eg7h, .wrapper-2vIMkT, .quickswitcher-3JagVE, .bioTextArea-dDGOeC, .input-2g-os5:not(.note-Go5ZP2 > .input-2g-os5, .inputWrapper-1YNMmM > .input-2g-os5),
+.input-2XRLou, .markup-2BOw-j code, .theme-dark .uploadModal-2ifh8j, .addFriendInputWrapper-kkoSV9 {
 	border: 1px solid var(--highlight);
 }
 
-.input-2XRLou, .list-17lzo8, .wrapper-2vIMkT, .button-38aScr, .bioTextArea-dDGOeC, .input-2g-os5:not(.note-Go5ZP2 > .input-2g-os5),
+.input-2XRLou, .list-17lzo8, .wrapper-2vIMkT, .button-38aScr, .bioTextArea-dDGOeC, .input-2g-os5:not(.note-Go5ZP2 > .input-2g-os5, .inputWrapper-1YNMmM > .input-2g-os5),
 .colorable-1bkp8v.primaryDark-3mSFDl, .colorable-1bkp8v.primaryDark-3mSFDl .centerIcon-2G6o-T,
 .theme-dark .uploadModal-2ifh8j, .uploadModal-2ifh8j .footer-3mqk7D.hasSpoilers-1IRtQC,
 .button-1YfofB.buttonColor-7qQbGO.buttonActive-3FrkXp,
-.button-1YfofB .buttonColor-7qQbGO.buttonActive-3FrkXp {
+.button-1YfofB .buttonColor-7qQbGO.buttonActive-3FrkXp, .addFriendInputWrapper-kkoSV9 {
 	background-color: var(--background);
 }
 
