@@ -507,7 +507,7 @@ ul {
 	margin-right: 2.5px;
 }
 
-.wrapper-2jXpOf:hover > .unread-2lAfLh {
+.wrapper-2jXpOf:hover > .unread-2lAfLh, .unread-36eUEm {
 	background-color: var(--highlight);
 }
 
