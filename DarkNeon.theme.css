@@ -1184,6 +1184,8 @@ ul {
 /* --== Style "day change" spacers in chat ==-- */
 .group-spacing-16 .divider-2rZFJK.hasContent-31hcsn {
 	background-color: var(--background);
+}
+.group-spacing-16 .divider-2rZFJK.hasContent-31hcsn:not(.isUnread-3Lojb-) {
 	border: none;
 }
 
