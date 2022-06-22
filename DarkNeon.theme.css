@@ -396,8 +396,8 @@ ul {
 	background-color: var(--background);
 }
 
-/* Background of Nitro menu on friends page */
-.applicationStore-2nk7Lo {
+/* Background of Nitro menu on friends page and server tips */
+.applicationStore-2nk7Lo, .upsellTooltipWrapper-1wqikQ {
 	background-color: var(--background);
 }
 
