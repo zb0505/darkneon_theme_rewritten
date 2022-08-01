@@ -403,7 +403,8 @@ ul {
 
 /* Background of Nitro menu on friends page and server tips */
 .applicationStore-2nk7Lo, .upsellTooltipWrapper-1wqikQ {
-	background-color: var(--background);
+	background-color: var(--background-popouts);
+	border: 1px solid var(--highlight);
 }
 
 
@@ -752,14 +753,14 @@ ul {
 	background-color: var(--background-main);
 }
 
-.lookFilled-yCfaCM.colorGreen-3y-Z79, .lookInverted-2D7oAl.colorBrand-3pXr91 {
+.lookFilled-yCfaCM.colorGreen-3y-Z79, .lookInverted-2mDUMi.colorBrand-I6CyqQ {
 	background-color: var(--background);
 	border: 1px solid var(--highlight);
 	color: var(--highlight);
 	transition-duration: .3s;
 }
 
-.lookFilled-yCfaCM.colorGreen-3y-Z79:hover, .lookInverted-2D7oAl.colorBrand-3pXr91:hover {
+.lookFilled-yCfaCM.colorGreen-3y-Z79:hover, .lookInverted-2mDUMi.colorBrand-I6CyqQ:hover {
 	background-color: var(--highlight);
 	color: var(--background-main);
 }
