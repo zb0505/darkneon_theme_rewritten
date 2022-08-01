@@ -292,11 +292,16 @@ ul {
 }
 
 /* Background of connections in settings and code redemption hint + other notes having similar style */
-.connection-1fbD7X, .theme-dark .codeRedemptionRedirect-2hYMSQ, .cardPrimary-3qRT__, .paymentBanner-1PHefn {
+.connection-1fbD7X, .theme-dark .codeRedemptionRedirect-2hYMSQ, .cardPrimary-3qRT__, .card-14SgW5, .paymentBanner-1PHefn {
 	background-color: var(--background-popouts);
 }
-.theme-dark .codeRedemptionRedirect-2hYMSQ, .cardPrimary-3qRT__, .paymentBanner-1PHefn {
+.theme-dark .codeRedemptionRedirect-2hYMSQ, .cardPrimary-3qRT__, .card-14SgW5, .paymentBanner-1PHefn {
 	border-color: var(--background-popouts);
+}
+
+/* Background of login popup */
+.theme-dark.authBox-1HR6Ha, .theme-dark .background-fkKrXt {
+	background-color: transparent;
 }
 
 /* Background of dropdown menus in settings */
@@ -817,10 +822,14 @@ ul {
 .status-2DiCMd[style="background-color: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%);"] {background-color: var(--dnd-color) !important;}
 
 /* --== Style right click list ==-- */
-.scroller-1bVxF5, .submenuContainer-3EVTeH .scroller-2MALzE {
+.scroller-1bVxF5, .submenuContainer-3EVTeH .scroller-2MALzE, .floating-3M3WeH {
 	border: 1px solid var(--highlight);
 	border-radius: 5px;
 	background-color: var(--background-options) !important;
+}
+.chatContent-3KubbW .scroller-kQBbkU {
+	background-color: transparent;
+	border: none;
 }
 
 /* --== Replace the green arrows on the join-messages ==-- */
