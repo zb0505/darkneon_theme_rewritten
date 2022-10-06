@@ -178,7 +178,7 @@ code {
 
 /* Background of autocomplete popup */
 .theme-dark .autocomplete-3NRXG8 {
-	background-color: var(--background) !important;
+	background-color: var(--background-popouts);
 	border: 1px solid var(--accent-color);
 }
 
@@ -701,7 +701,7 @@ ul {
 }
 
 /* --== Style autocomplete popout ==-- */
-.autocompleteInner-2tOQrf {
+.autocomplete-3NRXG8 {
 	background-color: var(--background-popouts);
 }
 .theme-dark .selected-3H3-RC {
