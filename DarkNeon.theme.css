@@ -865,11 +865,11 @@ ul {
 	border: 1px solid var(--highlight);
 }
 
-.container-2nx-BQ:not([style*="background-color: hsl(218, calc(var(--saturation-factor, 1) * 4.6%), 46.9%);"]) { /*For the checked ones*/
+.container-2nx-BQ:not([style*="background-color: rgb(114, 118, 125);"]) { /*For the checked ones*/
 	background-color: var(--highlight) !important;
 }
-.container-2nx-BQ[style*="background-color: hsl(218, calc(var(--saturation-factor, 1) * 4.6%), 46.9%);"] svg svg path { /*For the unchecked ones*/
-	fill: hsl(218, calc(var(--saturation-factor, 1) * 4.6%), 46.9%);
+.container-2nx-BQ[style*="background-color: rgb(114, 118, 125);"] svg svg path { /*For the unchecked ones*/
+	fill: rgb(114, 118, 125);
 }
 
 .uploadModal-2ifh8j .footer-3mqk7D.hasSpoilers-1IRtQC {
