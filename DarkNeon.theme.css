@@ -245,7 +245,7 @@
 	--brand-experiment-85a: var(--highlight);
 	--brand-experiment-90a: var(--highlight);
 	--brand-experiment-95a: var(--highlight);
-	--primary-630: var(--background)
+	--primary-630: var(--modal-background);
 }
 
 body {
@@ -323,11 +323,15 @@ body {
 	color: var(--highlight);
 }
 
-.drawerSizingWrapper-1txdWG > .contentWrapper-3vHNP2 {
+.drawerSizingWrapper-1txdWG > .contentWrapper-3vHNP2,
+.autocomplete-3NRXG8.outerWrapper-3UdjNj {
 	--background-secondary: transparent;
 	--background-secondary-alt: transparent;
 	--background-tertiary: transparent;
 	background-color: var(--modal-background);
+}
+.autocomplete-3NRXG8.outerWrapper-3UdjNj .categoryHeader-OpJ1Ly {
+	background-color: var(--bg-overlay-chat);
 }
 .drawerSizingWrapper-1txdWG .header-1XpmZs {
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
