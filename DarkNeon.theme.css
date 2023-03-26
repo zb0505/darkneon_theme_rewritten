@@ -79,7 +79,7 @@
 	--background-mobile-primary: transparent;
 	--background-secondary: var(--background) !important;
 	--background-mobile-secondary: var(--background);
-	--background-secondary-alt: transparent;
+	--background-secondary-alt: var(--background);
 	--background-tertiary: rgba(var(--rgb-background), 40%);
 	--background-accent: var(--background);
 	--background-floating: rgba(var(--rgb-background), 80%);
@@ -301,6 +301,44 @@ body {
 	background: rgba(0, 0, 0, 0) !important
 }
 
+.avatarWrapper-1B9FTW.withTagAsButton-OsgQ9L,
+.userProfileOuterThemed-3EfHmv,
+.peopleList-2VBrVI {
+	--header-primary: var(--text-normal);
+	--header-secondary: var(--text-normal);
+}
+.guilds-2JjMmN {
+	--background-primary: var(--background);
+}
+.chat-2ZfjoI .wrapper-3HVHpV {
+	--bg-overlay-chat: transparent;
+}
+
+.reaction-3vwAF2 {
+	border: 1px solid #b2b2b22a;
+	background-color: transparent;
+}
+.reaction-3vwAF2.reactionMe-1PwQAc {
+	background-color: transparent;
+	color: var(--highlight);
+}
+
+.drawerSizingWrapper-1txdWG > .contentWrapper-3vHNP2 {
+	--background-secondary: transparent;
+	--background-secondary-alt: transparent;
+	--background-tertiary: transparent;
+	background-color: var(--modal-background);
+}
+.drawerSizingWrapper-1txdWG .header-1XpmZs {
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.drawerSizingWrapper-1txdWG .header-1XpmZs .headerIcon-2Gk2OH svg path {
+	stroke: black;
+	stroke-width: 0.5px;
+	stroke-dasharray: 2,2;
+	stroke-linejoin: round;
+}
+
 .userProfileOuterUnthemed-2b2rsv {
 	border: 1px solid var(--highlight);
 	background-color: var(--modal-background);
@@ -311,6 +349,11 @@ body {
 
 .header-JUTO-g.stickyHeader-1Sunlx {
 	background-color: var(--background-floating);
+}
+
+.buttonContainer-1502pf .wrapper-2vIMkT {
+	border: 1px solid var(--highlight);
+	background-color: var(--background-tertiary);
 }
 
 #app-mount .wrapper-1VLyxH rect[fill="#593695"],
@@ -455,10 +498,6 @@ body {
 
 .userPanelInnerThemed-2xZFjl {
 	background-color: var(--background)
-}
-
-.reactionMe-1PwQAc .reactionCount-26U4As {
-	color: var(--background) !important
 }
 
 .botText-1fD6Qk,
