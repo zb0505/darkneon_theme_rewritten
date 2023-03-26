@@ -18,25 +18,36 @@
 
 /* CUSTOMIZE COLORS IN HERE! */
 :root {
-	--accent-color: rgb(210, 210, 210) !important; /* Main accent color */
-	--accent-color-rgb: 210, 210, 210 !important; /* Main accent color in RGB values */
-	--bg-image: url("https://i.pinimg.com/originals/39/0e/1e/390e1e3ed860bcc23fea7fb84cfd393b.jpg") !important; /* Background image */
-	--bg-image-darken: #00000080 !important; /* Darkening the background image */
-	--online-color: #39ff14 !important; /* The color used in the "online" user status symbol */
-	--afk-color: #ffec3d !important; /* The color used in the "idle" user status symbol */
-	--dnd-color: #FF0000 !important; /* The color used in the "do not disturb" user status symbol */
-	--streaming-color: #bc13fe !important; /* The color used in the "streaming X" user status symbol */
-	--background: #00000000 !important; /* Transparent background color to make the background image visible */
-	--background-main: black !important; /* The main background color */
-	--background-options: #000000ce !important; /* Background color of options (right-click menus) */
-	--background-popouts: #000000af !important; /* Background color of popouts like pinned messages and emoji picker (and a plus layer for options) */
-	--background-tooltips: #141414ee !important; /* Background color of tooltips */
-	--icon-background:  #202020 !important; /* Color of server icon backgrounds */
-	--code-background: #181818 !important; /* Background color of code blocks */
-	--embed-background: #111111 !important; /* Background color of embeds */
-	--msg-hover: #30303038 !important; /* Color of a message when hovering it (putting the cursor over it) */
-  
-	/* --== Radial Status support ==-- */
-	--rs-offline-color: gray !important;
-	--rs-invisible-color: gray !important;
+	/* Experiment with colors here, this value isn't used anywhere */
+	--color-exp: rgb(210, 210, 210);
+	/* The main highlight color */
+	--rgb-highlight: 210, 210, 210;
+	/* The main background color */
+	--rgb-background: 0, 0, 0;
+	/* The main text color */
+	--rgb-text: 197, 200, 198;
+	/* The main "close this" or "deny" color */
+	--rgb-close-button: 212, 18, 39;
+	/* The color used in the "online" user status symbol */
+	--rgb-online-color: 57, 255, 20;
+	/* The color used in the "idle" user status symbol */
+	--rgb-afk-color: 255, 255, 51;
+	/* The color used in the "do not disturb" user status symbol */
+	--rgb-dnd-color: 255, 0, 0;
+	/* The color used in the "streaming X" user status symbol */
+	--rgb-streaming-color: 188, 19, 254;
+
+	/* How fast animations added by the theme happen. Default is 0.3 seconds */
+	--transition-time: .3s;
+
+	/* To add an image, replace unset with url(https://www.YOUR-URL-HERE.com) */
+	--background-image: url("https://i.pinimg.com/originals/39/0e/1e/390e1e3ed860bcc23fea7fb84cfd393b.jpg");
+	/* Positions the background image */
+	--background-position: center;
+	/* Scales the background image */
+	--background-size: cover;
+	/* Blurs the image which helps with readability of text infront of it */
+	--background-blur: 0px;
+	/* Changes the background images brightness */
+	--background-brightness: 30%;
 }
