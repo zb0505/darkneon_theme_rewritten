@@ -75,6 +75,7 @@
 	--scrollbar-auto-track: transparent;
 	--scrollbar-auto-scrollbar-color-track: transparent;
 	--bg-overlay-chat: rgba(var(--rgb-background), 50%);
+	--bg-overlay-1: transparent;
 	--background-primary: transparent;
 	--background-mobile-primary: transparent;
 	--background-secondary: var(--background) !important;
@@ -91,8 +92,8 @@
 	--modal-background: rgba(var(--rgb-background), 80%);
 	--modal-footer-background: transparent;
 	--activity-card-background: var(--background);
-	--header-primary: rgb(var(--rgb-highlight));
-	--header-secondary: rgb(var(--rgb-highlight));
+	--header-primary: var(--text);
+	--header-secondary: var(--text);
 	--chat-background: var(--background);
 	--chat-border: var(--highlight);
 	--chat-input-container-background: var(--background);
@@ -299,6 +300,11 @@ body {
 .background-3d_SjE, .background-3d_SjE *,
 .userProfileOuterUnthemed-2b2rsv > div {
 	background: rgba(0, 0, 0, 0) !important
+}
+
+.chatContent-3KubbW .username-h_Y3Us {
+	--header-primary: var(--highlight);
+	--header-secondary: var(--highlight);
 }
 
 .avatarWrapper-1B9FTW.withTagAsButton-OsgQ9L,
