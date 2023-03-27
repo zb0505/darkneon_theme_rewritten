@@ -315,6 +315,8 @@ body {
 }
 .guilds-2JjMmN {
 	--background-primary: var(--background);
+	--header-primary: var(--highlight);
+	--header-secondary: var(--highlight);
 }
 .chat-2ZfjoI .wrapper-3HVHpV {
 	--bg-overlay-chat: transparent;
