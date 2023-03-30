@@ -307,11 +307,12 @@ body {
 	--header-secondary: var(--highlight);
 }
 
-.avatarWrapper-1B9FTW.withTagAsButton-OsgQ9L,
 .userProfileOuterThemed-3EfHmv,
-.peopleList-2VBrVI {
+.peopleList-2VBrVI,
+.panels-3wFtMD {
 	--header-primary: var(--text-normal);
 	--header-secondary: var(--text-normal);
+	--background-secondary-alt: transparent;
 }
 .guilds-2JjMmN {
 	--background-primary: var(--background);
@@ -327,6 +328,9 @@ body {
 }
 .chat-2ZfjoI .wrapper-3HVHpV {
 	--bg-overlay-chat: transparent;
+}
+.button-1EGGcP.buttonColor-3bP3fX, .button-1EGGcP .buttonColor-3bP3fX {
+	--background-secondary: var(--background-message-automod);
 }
 
 .reaction-3vwAF2 {
