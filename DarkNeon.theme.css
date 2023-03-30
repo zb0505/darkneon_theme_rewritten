@@ -78,7 +78,7 @@
 	--bg-overlay-1: transparent;
 	--background-primary: transparent;
 	--background-mobile-primary: transparent;
-	--background-secondary: var(--background) !important;
+	--background-secondary: var(--background);
 	--background-mobile-secondary: var(--background);
 	--background-secondary-alt: var(--background);
 	--background-tertiary: rgba(var(--rgb-background), 40%);
@@ -315,8 +315,15 @@ body {
 }
 .guilds-2JjMmN {
 	--background-primary: var(--background);
+	--background-secondary: transparent;
 	--header-primary: var(--highlight);
 	--header-secondary: var(--highlight);
+}
+.expandedFolderBackground-1kSAf6 {
+	background-color: #00000055;
+}
+.folder-241Joy.hover-3m7-WT {
+	background-color: var(--background-mentioned);
 }
 .chat-2ZfjoI .wrapper-3HVHpV {
 	--bg-overlay-chat: transparent;
