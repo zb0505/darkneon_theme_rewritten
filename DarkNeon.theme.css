@@ -82,7 +82,7 @@
 	--background-mobile-secondary: var(--background);
 	--background-secondary-alt: var(--background);
 	--background-tertiary: rgba(var(--rgb-background), 40%);
-	--background-accent: var(--background);
+	--background-accent: var(--background-message-automod-hover);
 	--background-floating: rgba(var(--rgb-background), 80%);
 	--background-nested-floating: transparent;
 	--background-modifier-accent: rgba(var(--rgb-highlight), 20%);
@@ -301,10 +301,16 @@ body {
 .userProfileOuterUnthemed-2b2rsv > div {
 	background: rgba(0, 0, 0, 0) !important
 }
+.background-3d_SjE button:hover {
+	background-color: var(--button-secondary-background) !important;
+}
 
 .chatContent-3KubbW .username-h_Y3Us {
 	--header-primary: var(--highlight);
 	--header-secondary: var(--highlight);
+}
+.container-2kTWmC {
+	--background-primary: var(--background-floating);
 }
 
 .userProfileOuterThemed-3EfHmv,
@@ -330,7 +336,8 @@ body {
 	--bg-overlay-chat: transparent;
 }
 .button-1EGGcP.buttonColor-3bP3fX, .button-1EGGcP .buttonColor-3bP3fX {
-	--background-secondary: var(--background-message-automod);
+	--background-primary: var(--background-message-hover);
+	--background-secondary: var(--background-message-automod-hover);
 }
 
 .reaction-3vwAF2 {
@@ -340,6 +347,16 @@ body {
 .reaction-3vwAF2.reactionMe-1PwQAc {
 	background-color: transparent;
 	color: var(--highlight);
+}
+.theme-dark .categoryFadeBlurple-1l49_Q, .theme-light .categoryFadeBlurple-1l49_Q {
+	background-color: hsl(var(--black-500-hsl)/.4);
+}
+.theme-dark .categoryFadeBlurple-1l49_Q:hover, .theme-light .categoryFadeBlurple-1l49_Q:hover {
+	background-color: rgba(0, 0, 0, .7);
+}
+.wrapper-2vIMkT {
+	background-color: rgba(var(--rgb-background), 50%);
+	border: 1px solid var(--highlight);
 }
 
 .drawerSizingWrapper-1txdWG > .contentWrapper-3vHNP2,
