@@ -74,6 +74,7 @@
 	--scrollbar-thin-track: transparent;
 	--scrollbar-auto-track: transparent;
 	--scrollbar-auto-scrollbar-color-track: transparent;
+	--deprecated-store-bg: var(--background-primary);
 	--bg-overlay-chat: rgba(var(--rgb-background), 50%);
 	--bg-overlay-1: transparent;
 	--background-primary: transparent;
@@ -266,8 +267,8 @@ body {
 .container-1NXEtd,
 .panels-3wFtMD,
 .container-YkUktl,
-.chat-2ZfjoI,
-.chatContent-3KubbW,
+.chat-9g_3Xj,
+.chatContent-2O4SXb,
 .title-31SJ6t,
 .searchBar-jGtisZ,
 .container-2o3qEW,
@@ -306,7 +307,7 @@ body {
 	background-color: var(--button-secondary-background) !important;
 }
 
-.chatContent-3KubbW .username-h_Y3Us {
+.chatContent-2O4SXb .username-h_Y3Us {
 	--header-primary: var(--highlight);
 	--header-secondary: var(--highlight);
 }
@@ -336,7 +337,7 @@ code {
 .folder-241Joy.hover-3m7-WT {
 	background-color: var(--background-mentioned);
 }
-.chat-2ZfjoI .wrapper-3HVHpV {
+.chat-9g_3Xj {
 	--bg-overlay-chat: transparent;
 }
 .button-1EGGcP.buttonColor-3bP3fX, .button-1EGGcP .buttonColor-3bP3fX {
@@ -464,7 +465,7 @@ code {
 	color: var(--background)
 }
 
-.channelTextArea-1FufC0 {
+.channelTextArea-1deLlK {
 	border: 1px solid var(--highlight)
 }
 .messagesWrapper-RpOMA3 {
