@@ -1,20 +1,19 @@
 /**
  * @name Dark Neon Red
- * @author xy0505#8248
- * @version 1.0.0
- * @source https://gitlab.com/CommandCrafterHD/bates-discord-theme
- * @website https://commandcrafterhd.gitlab.io/bates-discord-theme/
- * @donate https://www.paypal.com/paypalme/floriancegledi
- * @description A dark theme with bright neon-y colors and a fancy customizable background!
+ * @author xy0505
+ * @version 2.0.2
+ * @source https://github.com/zb0505/darkneon_theme_rewritten
+ * @website https://github.com/zb0505/darkneon_theme_rewritten
+ * @description A dark theme with bright neon-y colors
  * @authorId 695564552246525962
+ * @invite hGvApqaUxK
 */
 
 @import url('https://zb0505.github.io/darkneon_theme_rewritten/DarkNeon.theme.css');
-/* ^ This is the main Import ^ DO NOT TOUCH. Without this, the theme won't load!!! */
+/* ^ This is the main import ^ DO NOT TOUCH. Without this, the theme won't load! */
 
 /*@import url('https://commandcrafterhd.github.io/DiscordDarkNeon/css/hideUsers.css');
-/* ^ This import ^ Collapses the userlist in Servers and Groups, comment it out if you don't want that! */
-/* Also a big thank you to rmkx for letting me use some of their code for this, check out their "Boreal" theme! */
+/* This import adds the collapsible user-list. Uncomment it to activate that feature */
 
 /* CUSTOMIZE COLORS IN HERE! */
 :root {

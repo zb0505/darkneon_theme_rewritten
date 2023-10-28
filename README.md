@@ -1,7 +1,8 @@
 # DarkNeon theme rewritten
 BetterDiscord DarkNeon theme having the option to set a background image.\
 No code reuse is allowed.\
-Rewritten by xy0505#8248
+Should you encounter any problems using any of these themes, please contact me via Discord.\
+Theme rewritten and optimized by xy0505
 
 # Original author info
 Discord username: Bates#7075\
