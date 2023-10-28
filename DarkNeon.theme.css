@@ -4,7 +4,7 @@
  * @version 2.0.2
  * @source https://github.com/zb0505/darkneon_theme_rewritten
  * @website https://github.com/zb0505/darkneon_theme_rewritten
- * @description A dark theme with bright neon-y colors
+ * @description A dark theme with bright neon-y colors and a background image. Should be used via templates to have it update automatically (this has the same colors as the Blue template)
  * @authorId 695564552246525962
  * @invite hGvApqaUxK
 */
@@ -12,7 +12,7 @@
 /* @import url('https://commandcrafterhd.github.io/DiscordDarkNeon/mainRewrite.css'); */
 /* ^ This was the main import ^   but it's all down there in a rewritten form */
 
-/* @import url('https://commandcrafterhd.github.io/DiscordDarkNeon/css/hideUsers.css'); */
+/* @import url('https://zb0505.github.io/darkneon_theme_rewritten/MemberListCollapse.theme.css');
 /* This import adds the collapsible user-list. Uncomment it to activate that feature */
 
 /* CUSTOMIZE COLORS IN HERE! */
@@ -39,7 +39,7 @@
 	/* How fast animations added by the theme happen. Default is 0.3 seconds */
 	--transition-time: .3s;
 
-	/* To add an image, replace unset with url(https://www.YOUR-URL-HERE.com) */
+	/* To add an image, copy your image URL in here */
 	--background-image: url("https://wallpaperaccess.com/full/44211.jpg");
 	/* Positions the background image */
 	--background-position: center;
@@ -104,7 +104,7 @@
 	/* Modal and card backgrounds */
 	--modal-background: rgba(var(--rgb-background), 80%);
 	--modal-footer-background: transparent;
-	--activity-card-background: var(--background);
+	--activity-card-background: var(--background-floating);
 	/* Header colors */
 	--header-primary: var(--text);
 	--header-secondary: var(--text);
@@ -231,6 +231,10 @@
 	--status-danger: var(--dnd-color);
 	--status-warning: var(--afk-color);
 	--status-positive: var(--online-color);
+	/* Status button colors (eg. add friend button when that tab is not active) */
+	--status-danger-background: var(--button-danger-background);
+	--status-warning-background: rgba(var(--rgb-afk-color), 20%);
+	--status-positive-background: var(--button-positive-background);
 	/* Profile popout colors */
 	--profile-body-background-color: transparent;
 	--profile-gradient-primary-color: transparent;
@@ -284,7 +288,10 @@
 	--brand-experiment-85a: rgba(var(--rgb-highlight), 0.85);
 	--brand-experiment-90a: rgba(var(--rgb-highlight), 0.9);
 	--brand-experiment-95a: rgba(var(--rgb-highlight), 0.95);
-	--primary-630: var(--modal-background);
+	/* Other colors */
+	--brand-500: var(--button-brand-background-hover); /* Icon color for partnered servers and color for checkboxes */
+	--green-360: var(--button-positive-background-hover); /* Green verified icon for servers */
+	--primary-630: var(--modal-background); /* Modal backgrounds */
 }
 
 /* ============ App base styles ============ */
@@ -322,6 +329,7 @@ code {
 .container__0a6a9, /* Unread mentions popout scrollable area */
 .members__9f47b, /* Server members sidebar */
 .searchResultsWrap__9f374, /* Server search sidebar */
+.addFriendInputWrapper__4bf8e, /* Add friend input */
 .container_b2ce9c, /* Unknown */
 .channelTextArea__2e60f, /* Chat input wrapper */
 .replyBar_b64d74, /* Appears above input when you're replying */
@@ -332,26 +340,37 @@ code {
 .privateChannels__93473, /* Private channels container */
 .scroller__00e7e, /* Unknown */
 .standardSidebarView__1129a, /* Unknown */
-.sidebarRegionScroller__1fa7e, /* Unknown */
+.sidebarRegionScroller__1fa7e, /* Settings menu left sidebar */
 .background_b61fcc, /* Account settings profile preview */
 .background_b61fcc *:not(.lookLink__93965, .lookFilled__19298),
 .userProfileOuterUnthemed__48723 > div {
 	background-color: rgba(0, 0, 0, 0) !important
 }
 
-/* People list, current user + controls (aka .panels) and profile outer layer */
-.userProfileOuterThemed__6eb84,
-.peopleList__2379e,
-.panels__58331 {
+/* People list, current user controls and profile outer layer */
+.userProfileOuterThemed__6eb84, /* Profile outer layer */
+.peopleList__2379e, /* People list (friends tab) */
+.panels__58331 { /* Current user controls (voice and settings buttons) */
 	--header-primary: var(--text-normal);
 	--header-secondary: var(--text-normal);
 	--background-secondary-alt: transparent;
 }
 
+/* Checkbox styles (eg. in create group chat) */
+.checkbox_c7f690 {
+	--brand-500: var(--highlight);
+}
+
+/* Activities sidebar card backgrounds */
+.nowPlayingColumn_f5023f {
+	--background-secondary: transparent;
+	--primary-800: rgba(var(--rgb-background), 40%);
+}
+
 /* Recent mentions, pinned messages and threads popout */
-.recentMentionsPopout__826a9,
-.messagesPopoutWrap_b3b384,
-.container__8261a {
+.recentMentionsPopout__826a9, /* Recent mentions */
+.messagesPopoutWrap_b3b384, /* Pinned messages */
+.container__8261a { /* Threads popout */
 	--background-secondary: var(--background-floating);
 }
 /* Main header area in recent mentions */
@@ -363,11 +382,15 @@ code {
 	background-color: transparent;
 }
 
-/* Search bar in threads popout */
-.searchBox_ff53b2 {
+/* Search bar and add friend input styles */
+.searchBox_ff53b2, /* Threads popout */
+.searchBar_ff8800, /* Above friends list */
+.addFriendInputWrapper__4bf8e { /* Add friend input */
 	border: 1px solid rgba(var(--rgb-highlight), 20%);
 }
-.searchBox_ff53b2:focus-within {
+.searchBox_ff53b2:focus-within,
+.searchBar_ff8800:focus-within,
+.addFriendInputWrapper__4bf8e:focus-within {
 	border: 1px solid var(--highlight);
 }
 
@@ -388,6 +411,24 @@ code {
 .folder__17546.hover__043de {
 	background-color: var(--background-mentioned);
 }
+
+
+/* User status changer popout */
+.submenu_acf564 {
+	border: 1px solid var(--highlight);
+}
+/* User switcher modal button bar */
+.modal__20db0 .navRow_bb8efc {
+	background-color: transparent;
+}
+/* User switcher modal inputs */
+.modal__20db0 .input_d266e7 {
+	border: 1px solid rgba(var(--rgb-highlight), 20%);
+}
+.modal__20db0 .input_d266e7:focus-within {
+	border: 1px solid var(--highlight);
+}
+
 
 /* Voice chat buttons */
 .button__66e8c.buttonColor_a6eb73,
@@ -713,6 +754,33 @@ div.status__1c26d {
 	--brand-experiment-100: #e1e1ec;
 }
 
+/* Select input styles */
+.lookFilled__3dba3.select__0eb48 {
+	--input-background: var(--background-tertiary);
+}
+/* Dropdown list styles */
+.popout_a6e77f {
+	--background-secondary: var(--background-floating);
+	--background-modifier-selected: var(--background-mentioned);
+}
+
+/* Sound selector input */
+.soundButtonSettingContainer__548af {
+	--background-secondary: var(--background-tertiary);
+}
+/* Sound button styles in popup */
+.soundButton__5ad7b {
+	--background-secondary: transparent;
+	--background-tertiary: var(--background-message-hover);
+}
+/* Sound search bar */
+.container_e4c233 {
+	border: 1px solid rgba(var(--rgb-highlight), 20%);
+}
+.container_e4c233:focus-within {
+	border: 1px solid var(--highlight);
+}
+
 /* Active switch toggles */
 .container__871ba.checked__6bdb0 {
 	background-color: var(--highlight) !important;
@@ -753,8 +821,9 @@ div.status__1c26d {
 
 /* Left sidebar bottom */
 .info__755e1:last-child::after {
-	content: "Dark Neon Version 2.0.1";
+	content: "Dark Neon by xy0505 (2.0.2)";
 	font-size: 12px;
 	line-height: 16px;
 	color: var(--text);
+	text-transform: none;
 }

@@ -12,7 +12,7 @@
 @import url('https://zb0505.github.io/darkneon_theme_rewritten/DarkNeon.theme.css');
 /* ^ This is the main import ^ DO NOT TOUCH. Without this, the theme won't load! */
 
-/*@import url('https://commandcrafterhd.github.io/DiscordDarkNeon/css/hideUsers.css');
+/*@import url('https://zb0505.github.io/darkneon_theme_rewritten/MemberListCollapse.theme.css');
 /* This import adds the collapsible user-list. Uncomment it to activate that feature */
 
 /* CUSTOMIZE COLORS IN HERE! */
@@ -39,7 +39,7 @@
 	/* How fast animations added by the theme happen. Default is 0.3 seconds */
 	--transition-time: .3s;
 
-	/* To add an image, replace unset with url(https://www.YOUR-URL-HERE.com) */
+	/* To add an image, copy your image URL in here */
 	--background-image: url("https://wallpapercave.com/wp/wp2566070.jpg");
 	/* Positions the background image */
 	--background-position: center;
