@@ -9,8 +9,11 @@
  * @invite hGvApqaUxK
 */
 
+/* @import url('https://zb0505.github.io/darkneon_theme_rewritten/DarkNeon.theme.css'); */
+/* ^ This is the main import ^   uncomment to enable auto update if you downloaded this file instead of a template */
+
 /* @import url('https://commandcrafterhd.github.io/DiscordDarkNeon/mainRewrite.css'); */
-/* ^ This was the main import ^   but it's all down there in a rewritten form */
+/* ^ This was the main import in the original theme ^   but it's all down there in a rewritten form */
 
 /* @import url('https://zb0505.github.io/darkneon_theme_rewritten/MemberListCollapse.theme.css');
 /* This import adds the collapsible user-list. Uncomment it to activate that feature */
@@ -50,7 +53,6 @@
 	/* Changes the background images brightness */
 	--background-brightness: 30%;
 }
-
 /* END OF CUSTOMIZATION */
 
 
@@ -641,6 +643,11 @@ div.status__1c26d {
 /* Set margin bottom for messages container to avoid it going into the input area */
 .messagesWrapper_ea2b0b {
 	margin-bottom: 0.6em;
+}
+
+/* AKA badge colors */
+.akaBadge__7df41 {
+	color: var(--text) !important;
 }
 
 /* Base element of chat text area */
