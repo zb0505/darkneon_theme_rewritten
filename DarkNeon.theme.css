@@ -123,9 +123,9 @@
 	--control-brand-foreground-new: var(--highlight);
 	/* Mention and message hover colors */
 	--background-mentioned: rgba(var(--rgb-highlight), 30%);
-	--background-mentioned-hover: rgba(var(--rgb-highlight), 40%);
+	--background-mentioned-hover: rgba(var(--rgb-highlight), 20%);
 	--background-message-hover: rgba(var(--rgb-highlight), 10%);
-	--background-message-highlight: rgba(var(--rgb-highlight), 30%);
+	--background-message-highlight: rgba(var(--rgb-highlight), 25%);
 	--background-message-highlight-hover: rgba(var(--rgb-highlight), 40%);
 	--background-message-automod: rgba(var(--rgb-highlight), 20%);
 	--background-message-automod-hover: rgba(var(--rgb-highlight), 40%);
@@ -682,6 +682,10 @@ div.status__1c26d {
 	color: var(--highlight);
 }
 
+/* Message hover effects */
+.message__80c10 {
+	--bg-overlay-3: var(--background-message-hover);
+}
 /* Mentioned message marker color */
 .mentioned__58017::before {
 	background-color: var(--highlight)
