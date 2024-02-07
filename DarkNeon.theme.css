@@ -684,6 +684,8 @@ div.status__1c26d {
 
 /* Message hover effects */
 .message__80c10 {
+	--bg-overlay-1: var(--background-message-hover);
+	--bg-overlay-2: var(--background-message-hover);
 	--bg-overlay-3: var(--background-message-hover);
 }
 /* Mentioned message marker color */
