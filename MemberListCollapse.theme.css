@@ -1,7 +1,7 @@
 /**
  * @name Collapsible Members List
  * @author xy0505
- * @version 2.0.2
+ * @version 2.0.3
  * @source https://github.com/zb0505/darkneon_theme_rewritten
  * @website https://github.com/zb0505/darkneon_theme_rewritten
  * @description A plugin to have a collapsible member list in servers. Should be used as @import to have it update automatically
@@ -29,28 +29,28 @@
 =======================================================================
 */
 /* Member list container collapsed */
-.container_b2ce9c, /* DM & server */
-.membersWrap__90226 { /* Server */
+.container_f79ab4, /* DM & server */
+.membersWrap__5ca6b { /* Server */
 	transition-duration: var(--transition-time);
 	justify-content: unset;
 	min-width: unset;
 	width: var(--hidden-user-width)
 }
 /* Role/group names collapsed */
-.membersGroup__85843 {
+.membersGroup_cad095 {
 	height: 0px;
 	transition-duration: var(--transition-time);
 	padding-top: 0px
 }
 
 /* Role/group names opened */
-.container_b2ce9c:hover .membersGroup__85843, /* DM & server */
-.membersWrap__90226:hover .membersGroup__85843 { /* Server */
+.container_f79ab4:hover .membersGroup_cad095, /* DM & server */
+.membersWrap__5ca6b:hover .membersGroup_cad095 { /* Server */
 	height: 40px;
 	padding-top: 24px
 }
 /* Member list container opened */
-.container_b2ce9c:hover, /* DM & server */
-.membersWrap__90226:hover { /* Server */
+.container_f79ab4:hover, /* DM & server */
+.membersWrap__5ca6b:hover { /* Server */
 	width: var(--user-width)
 }
