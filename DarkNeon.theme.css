@@ -311,7 +311,12 @@ code {
 	--background-tertiary: rgba(51, 51, 51, 0.4);
 }
 
-/* Make most components transparent (unknown ones will be documented in the next update) */
+/* Disable outline which appears around server list when exiting DevTools */
+* {
+	outline: none;
+}
+
+/* Make most components transparent (unknown ones will be documented when found) */
 .appMount_c99875, /* Main container */
 .app_b1f720, /* Below main container */
 .app_de4237, /* Below previous */
@@ -358,6 +363,8 @@ code {
 .panels__58331 { /* Current user controls (voice and settings buttons) */
 	--header-primary: var(--text-normal);
 	--header-secondary: var(--text-normal);
+	--background-primary: var(--background-message-hover);
+	--background-secondary: var(--background-mentioned);
 	--background-secondary-alt: transparent;
 }
 
