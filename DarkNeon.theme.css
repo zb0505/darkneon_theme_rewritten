@@ -378,6 +378,10 @@ code {
 	--background-secondary: transparent;
 	--primary-800: rgba(var(--rgb-background), 40%);
 }
+/* Chat and options buttons on friend list tab */
+.actionButton__2b4bb {
+	--background-secondary: var(--background-tertiary);
+}
 
 /* Recent mentions, pinned messages and threads popout */
 .recentMentionsPopout__40c54, /* Recent mentions */
