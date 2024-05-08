@@ -1,7 +1,7 @@
 /**
  * @name Dark Neon
  * @author xy0505
- * @version 2.0.4
+ * @version 2.0.5
  * @source https://github.com/zb0505/darkneon_theme_rewritten
  * @website https://github.com/zb0505/darkneon_theme_rewritten
  * @description A dark theme with bright neon-y colors and a background image. Should be used via templates to have it update automatically (this has the same colors as the Blue template)
@@ -373,6 +373,11 @@ code {
 	--brand-500: var(--highlight);
 }
 
+/* Tooltip styles */
+.tooltip__7b090 {
+	--background-nested-floating: var(--modal-background);
+}
+
 /* Activities sidebar card backgrounds */
 .nowPlayingColumn_b025fe {
 	--background-secondary: transparent;
@@ -472,12 +477,13 @@ code {
 }
 /* Outer layer */
 .userProfileOuterUnthemed__9741c {
+	--background-secondary-alt: var(--modal-background);
 	border: 1px solid var(--highlight);
-	background-color: var(--modal-background);
+	background-color: transparent;
 }
 /* Inner layer */
 .userProfileInnerThemedNonPremium_b64fb4 {
-	background-color: var(--modal-background);
+	--profile-body-background-color: transparent;
 }
 /* Send message input */
 .messageInput_c423ff:focus-within {
@@ -863,7 +869,7 @@ div.status__1c26d {
 
 /* Left sidebar bottom */
 .info__755e1:last-child::after {
-	content: "Dark Neon by xy0505 (2.0.4)";
+	content: "Dark Neon by xy0505 (2.0.5)";
 	font-size: 12px;
 	line-height: 16px;
 	color: var(--text);
