@@ -481,6 +481,10 @@ code {
 	border: 1px solid var(--highlight);
 	background-color: transparent;
 }
+/* Outer layer of mini user popup (appears when clicking on a user's icon) */
+.userProfileOuterUnthemed__9741c.biteSizeOuter_e0bb1d {
+	background-color: var(--modal-background);
+}
 /* Inner layer */
 .userProfileInnerThemedNonPremium_b64fb4 {
 	--profile-body-background-color: transparent;
