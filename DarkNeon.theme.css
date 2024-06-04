@@ -241,6 +241,35 @@
 	--profile-body-background-color: transparent;
 	--profile-gradient-primary-color: transparent;
 	--profile-gradient-secondary-color: transparent;
+	/* Brand color overwrites */
+	--brand: var(--highlight);
+	--brand-100: var(--highlight);
+	--brand-130: var(--highlight);
+	--brand-160: var(--highlight);
+	--brand-200: var(--highlight);
+	--brand-230: var(--highlight);
+	--brand-260: var(--highlight);
+	--brand-300: var(--highlight);
+	--brand-330: var(--highlight);
+	--brand-360: var(--highlight);
+	--brand-400: var(--highlight);
+	--brand-430: var(--highlight);
+	--brand-460: var(--highlight);
+	--brand-500: var(--highlight);
+	--brand-530: var(--highlight);
+	--brand-560: var(--highlight);
+	--brand-600: var(--highlight);
+	--brand-630: var(--highlight);
+	--brand-660: var(--highlight);
+	--brand-700: var(--highlight);
+	--brand-730: var(--highlight);
+	--brand-760: var(--highlight);
+	--brand-800: var(--highlight);
+	--brand-830: var(--highlight);
+	--brand-860: var(--highlight);
+	--brand-900: var(--highlight);
+	--brand-930: var(--highlight);
+	--brand-960: var(--highlight);
 	/* Brand experiment overwrites */
 	--brand-experiment: var(--highlight);
 	--brand-experiment-100: var(--highlight);
