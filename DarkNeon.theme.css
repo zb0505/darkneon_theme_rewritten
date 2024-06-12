@@ -493,9 +493,12 @@ code {
 }
 
 /* Unread number badge and search result unread number badge */
-.numberBadge__40d6f, .wrapper__85934 {
+.numberBadge_c1210c, .wrapper__85934 {
 	background-color: rgba(var(--rgb-highlight), 70%) !important;
 	color: var(--background)
+}
+.mention_dd733a:active {
+	background-color: var(--highlight);
 }
 
 
