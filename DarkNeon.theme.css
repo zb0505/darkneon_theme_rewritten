@@ -51,7 +51,7 @@
 	/* Blurs the image which helps with readability of text infront of it */
 	--background-blur: 0px;
 	/* Changes the background images brightness */
-	--background-brightness: 30%;
+	--background-brightness: 20%;
 }
 /* END OF CUSTOMIZATION */
 
