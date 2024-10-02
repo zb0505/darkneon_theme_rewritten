@@ -1,7 +1,7 @@
 /**
  * @name Dark Neon
  * @author xy0505
- * @version 2.0.7
+ * @version 2.0.8
  * @source https://github.com/zb0505/darkneon_theme_rewritten
  * @website https://github.com/zb0505/darkneon_theme_rewritten
  * @description A dark theme with bright neon-y colors and a background image. Should be used via templates to have it update automatically (this has the same colors as the Blue template)
@@ -352,6 +352,7 @@ code {
 .app__00c92, /* Below previous */
 .bg_d4b6c5, /* Below previous */
 .guilds_a4d4d9, /* Guild sidebar */
+.footer_aa1bff, /* Explore button under guilds in sidebar */
 .scroller__4b984, /* Unknown */
 .sidebar_a4d4d9, /* Private/server channels container */
 .container__037ed, /* Unknown */
@@ -781,7 +782,7 @@ code {
 	--divider-color: var(--highlight);
 }
 /* Date container */
-.divider_d5deea .content_fc5f50 {
+.divider_d5deea .content_c2654d {
 	background-color: var(--background);
 }
 /* Unread divider */
@@ -792,7 +793,7 @@ code {
 	--divider-color: var(--highlight);
 }
 /* Unread date container */
-.isUnread_fc5f50 .content_fc5f50 {
+.isUnread_fc5f50 .content_c2654d {
 	color: var(--highlight);
 	background-color: var(--background);
 }
@@ -971,7 +972,7 @@ code {
 
 /* Left sidebar bottom */
 .info_c5a741:last-child::after {
-	content: "Dark Neon by xy0505 (2.0.7)";
+	content: "Dark Neon by xy0505 (2.0.8)";
 	font-size: 12px;
 	line-height: 16px;
 	color: var(--text);
