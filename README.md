@@ -7,6 +7,6 @@ Themes rewritten and optimized by `@xy0505`
 # Original author info
 Discord username: Bates#7075\
 Discord ID: 137259132305539072\
-Source: https://gitlab.com/CommandCrafterHD/bates-discord-theme \
-Website: https://commandcrafterhd.gitlab.io/bates-discord-theme/ \
+Source: https://b4t3s.github.io/DiscordDarkNeon \
+Website: https://b4t3s.github.io/DiscordDarkNeon \
 Description: A dark theme with bright neon-y colors and a fancy customizable background!

@@ -1,7 +1,7 @@
 /**
- * @name Dark Neon
+ * @name Dark Neon Plus
  * @author xy0505
- * @version 2.0.8
+ * @version 2.1.0
  * @source https://github.com/zb0505/darkneon_theme_rewritten
  * @website https://github.com/zb0505/darkneon_theme_rewritten
  * @description A dark theme with bright neon-y colors and a background image. Should be used via templates to have it update automatically (this has the same colors as the Blue template)
@@ -9,13 +9,13 @@
  * @invite hGvApqaUxK
 */
 
-/* @import url('https://zb0505.github.io/darkneon_theme_rewritten/DarkNeon.theme.css'); */
+/* @import url('https://zb0505.github.io/darkneon_theme_rewritten/DarkNeonPlus.theme.css'); */
 /* ^ This is the main import ^   uncomment to enable auto update if you downloaded this file instead of a template */
 
-/* @import url('https://commandcrafterhd.github.io/DiscordDarkNeon/mainRewrite.css'); */
+/* @import url('https://b4t3s.github.io/DiscordDarkNeon/mainRewrite.css'); */
 /* ^ This was the main import in the original theme ^   but it's all down there in a rewritten form */
 
-/* @import url('https://zb0505.github.io/darkneon_theme_rewritten/MemberListCollapse.theme.css');
+/* @import url('https://zb0505.github.io/darkneon_theme_rewritten/MemberListCollapsePlus.theme.css');
 /* This import adds the collapsible user-list. Uncomment it to activate that feature */
 
 /* CUSTOMIZE COLORS IN HERE! */
@@ -50,7 +50,7 @@
 	--background-size: cover;
 	/* Blurs the image which helps with readability of text infront of it */
 	--background-blur: 0px;
-	/* Changes the background images brightness */
+	/* Changes the background image brightness */
 	--background-brightness: 20%;
 }
 /* END OF CUSTOMIZATION */
@@ -364,6 +364,8 @@ code {
 .chat_a7d72e, /* Main chat wrapper */
 .chatContent_a7d72e, /* Chat content */
 .title_d4ba1a, /* Chat title */
+.container_b56bbc, /* GIF popout background*/
+.header_b56bbc, /* GIF popout search background */
 .searchBar_f0963d, /* Search bar (above private chats) */
 .members_cbd271, /* Server members sidebar */
 .searchResultsWrap_c2b47d, /* Server search sidebar */
@@ -746,10 +748,14 @@ code {
 	--header-primary: var(--highlight);
 	--header-secondary: var(--highlight);
 }
-/* Reactions */
+/* Reactions and reaction button */
 .reaction_ec6b19 {
 	border: 1px solid #b2b2b22a;
 	background-color: transparent;
+}
+.reactionBtn_ec6b19 {
+	background-color: transparent !important;
+	border: 1px solid #b2b2b22a !important;
 }
 /* User's reactions */
 .reaction_ec6b19.reactionMe_ec6b19 {
@@ -768,8 +774,8 @@ code {
 	background-color: var(--highlight)
 }
 /* Message buttons container (appears upon hover) */
-.buttonContainer_f9f2ca .wrapper_ef319f {
-	border: 1px solid var(--highlight);
+.buttonsInner_d5deea {
+	border: 1px solid var(--border-subtle);
 	background-color: var(--background-tertiary);
 }
 /* More options popout submenu marker arrows */
@@ -972,7 +978,7 @@ code {
 
 /* Left sidebar bottom */
 .info_c5a741:last-child::after {
-	content: "Dark Neon by xy0505 (2.0.8)";
+	content: "Dark Neon by xy0505 (2.1.0)";
 	font-size: 12px;
 	line-height: 16px;
 	color: var(--text);

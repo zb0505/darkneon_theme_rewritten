@@ -1,7 +1,7 @@
 /**
- * @name Dark Neon Red
+ * @name Dark Neon Plus - Red
  * @author xy0505
- * @version 2.0.3
+ * @version 2.1.0
  * @source https://github.com/zb0505/darkneon_theme_rewritten
  * @website https://github.com/zb0505/darkneon_theme_rewritten
  * @description A dark theme with bright neon-y colors
@@ -9,10 +9,10 @@
  * @invite hGvApqaUxK
 */
 
-@import url('https://zb0505.github.io/darkneon_theme_rewritten/DarkNeon.theme.css');
+@import url('https://zb0505.github.io/darkneon_theme_rewritten/DarkNeonPlus.theme.css');
 /* ^ This is the main import ^ DO NOT TOUCH. Without this, the theme won't load! */
 
-/*@import url('https://zb0505.github.io/darkneon_theme_rewritten/MemberListCollapse.theme.css');
+/*@import url('https://zb0505.github.io/darkneon_theme_rewritten/MemberListCollapsePlus.theme.css');
 /* This import adds the collapsible user-list. Uncomment it to activate that feature */
 
 /* CUSTOMIZE COLORS IN HERE! */

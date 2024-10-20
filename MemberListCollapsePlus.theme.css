@@ -1,7 +1,7 @@
 /**
- * @name Collapsible Members List
+ * @name Collapsible Members List Plus
  * @author xy0505
- * @version 2.0.4
+ * @version 2.1.0
  * @source https://github.com/zb0505/darkneon_theme_rewritten
  * @website https://github.com/zb0505/darkneon_theme_rewritten
  * @description A plugin to have a collapsible member list in servers. Should be used as @import to have it update automatically
@@ -9,15 +9,15 @@
  * @invite hGvApqaUxK
 */
 
-/* @import url('https://zb0505.github.io/darkneon_theme_rewritten/MemberListCollapse.theme.css');
+/* @import url('https://zb0505.github.io/darkneon_theme_rewritten/MemberListCollapsePlus.theme.css');
 /* If you downloaded this file you may want to uncomment this to have auto update enabled */
 
 
-/* CUSTOMIZE TRANSITION TIME ONLY */
+/* CUSTOMIZE TRANSITION TIME AND PROPERTIES HERE */
 :root {
 	--transition-time: .3s; /* Animation time */
-	--hidden-user-width: 60px; /* Collapsed width */
-	--user-width: 240px; /* Opened width */
+	--hidden-user-width: 60px; /* Collapsed width (should not be edited) */
+	--user-width: 240px; /* Opened width (should not be edited) */
 }
 /* END OF CUSTOMIZATION */
 
