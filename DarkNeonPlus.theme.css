@@ -1,7 +1,7 @@
 /**
  * @name Dark Neon Plus
  * @author xy0505
- * @version 2.1.0
+ * @version 2.1.1
  * @source https://github.com/zb0505/darkneon_theme_rewritten
  * @website https://github.com/zb0505/darkneon_theme_rewritten
  * @description A dark theme with bright neon-y colors and a background image. Should be used via templates to have it update automatically (this has the same colors as the Blue template)
@@ -370,7 +370,7 @@ code {
 .members_cbd271, /* Server members sidebar */
 .searchResultsWrap_c2b47d, /* Server search sidebar */
 .container_b2ce9c, /* Unknown */
-.channelTextArea_d0696b, /* Chat input wrapper */
+.channelTextArea_a7d72e, /* Chat input wrapper */
 .replyBar_b11c5e, /* Appears above input when you're replying */
 .threadSuggestionBar_b11c5e, /* Unknown, it was next to .replyBar in Discord's CSS */
 .attachedBars_d0696b, /* Wrapper of .replyBar */
@@ -706,6 +706,11 @@ code {
 	background-color: var(--background-modifier-hover);
 }
 
+/* Stream preview on hover */
+.streamPreview_adbea6 {
+	background-color: var(--modal-background);
+}
+
 
 /* ============ Chat components ============ */
 /* Main chat area with sidebars */
@@ -723,10 +728,10 @@ code {
 }
 
 /* Base element of chat text area */
-.channelTextArea_d0696b {
+.channelTextArea_a7d72e {
 	border: 1px solid rgba(var(--rgb-highlight), 20%);
 }
-.channelTextArea_d0696b:focus-within {
+.channelTextArea_a7d72e:focus-within {
 	border: 1px solid var(--highlight);
 }
 /* Scrollable inner text area */
@@ -978,7 +983,7 @@ code {
 
 /* Left sidebar bottom */
 .info_c5a741:last-child::after {
-	content: "Dark Neon by xy0505 (2.1.0)";
+	content: "Dark Neon by xy0505 (2.1.1)";
 	font-size: 12px;
 	line-height: 16px;
 	color: var(--text);
