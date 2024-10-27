@@ -371,6 +371,7 @@ code {
 .searchResultsWrap_c2b47d, /* Server search sidebar */
 .container_b2ce9c, /* Unknown */
 .channelTextArea_a7d72e, /* Chat input wrapper */
+.stackedBars_bdf0de, /* Reply bar container */
 .replyBar_b11c5e, /* Appears above input when you're replying */
 .threadSuggestionBar_b11c5e, /* Unknown, it was next to .replyBar in Discord's CSS */
 .attachedBars_d0696b, /* Wrapper of .replyBar */
