@@ -1,7 +1,7 @@
 /**
  * @name Dark Neon Plus
  * @author xy0505
- * @version 2.1.1
+ * @version 2.1.2
  * @source https://github.com/zb0505/darkneon_theme_rewritten
  * @website https://github.com/zb0505/darkneon_theme_rewritten
  * @description A dark theme with bright neon-y colors and a background image. Should be used via templates to have it update automatically (this has the same colors as the Blue template)
@@ -349,13 +349,13 @@ code {
 .appMount_ea7e65, /* Main container */
 .app_bd26cc, /* Below main container */
 .app_a01fb1, /* Below previous */
-.app__00c92, /* Below previous */
+.app_a01fb1, /* Below previous */
 .bg_d4b6c5, /* Below previous */
 .guilds_a4d4d9, /* Guild sidebar */
-.footer_f8ec41, /* Explore button under guilds in sidebar */
-.scroller__4b984, /* Unknown */
+.footer_d71945, /* Explore button under guilds in sidebar */
+.scroller_c47fa9, /* Unknown */
 .sidebar_a4d4d9, /* Private/server channels container */
-.container__037ed, /* Unknown */
+.container_a4d4d9, /* Unknown */
 .shop_e77fa3, /* New shop tab */
 .panels_a4d4d9, /* Current user with mic/deafen controllers */
 .container_c2739c, /* Wrapper of right-side area (eg. friends and activities container) */
@@ -363,22 +363,22 @@ code {
 .addFriendInputWrapper_de812f, /* Add friend input */
 .chat_a7d72e, /* Main chat wrapper */
 .chatContent_a7d72e, /* Chat content */
-.title_d4ba1a, /* Chat title */
+.title_a7d72e, /* Chat title */
 .container_b56bbc, /* GIF popout background*/
 .header_b56bbc, /* GIF popout search background */
 .searchBar_f0963d, /* Search bar (above private chats) */
 .members_cbd271, /* Server members sidebar */
 .searchResultsWrap_c2b47d, /* Server search sidebar */
-.container_b2ce9c, /* Unknown */
+.container_cbd271, /* Unknown */
 .channelTextArea_a7d72e, /* Chat input wrapper */
 .stackedBars_bdf0de, /* Reply bar container */
 .replyBar_b11c5e, /* Appears above input when you're replying */
 .threadSuggestionBar_b11c5e, /* Unknown, it was next to .replyBar in Discord's CSS */
-.attachedBars_d0696b, /* Wrapper of .replyBar */
-.container__08420, /* Unknown */
+.stackedBars_bdf0de, /* Wrapper of .replyBar */
+.container_b11c5e, /* Unknown */
 .privateChannels_f0963d, /* Private channels container */
-.scroller__00e7e, /* Unknown */
-.standardSidebarView__1129a, /* Unknown */
+.scroller_bf550a, /* Unknown */
+.standardSidebarView_c25c6d, /* Unknown */
 .sidebarRegionScroller_c25c6d, /* Settings menu left sidebar */
 .wrapper_efd8e6, /* Slash command popout left side bot icon container */
 .wrapper_ba23fe, /* Below previous */
@@ -422,7 +422,7 @@ code {
 
 /* Recent mentions, pinned messages and threads popout */
 .recentMentionsPopout_ddb5b4, /* Recent mentions */
-.messagesPopoutWrap__10dd1, /* Pinned messages */
+.messagesPopoutWrap_ac90a2, /* Pinned messages */
 .container_e664f3 { /* Threads popout */
 	--background-secondary: var(--background-floating);
 }
@@ -504,7 +504,7 @@ code {
 
 /* ============ User profile popups ============ */
 /* Profile popout container */
-.root_ba16f0 {
+.root_b9fccc {
 	background: transparent;
 }
 /* Outer layer */
@@ -576,11 +576,11 @@ code {
 	border: 1px solid rgba(var(--rgb-highlight), 10%);
 }
 /* Search popup selected result */
-.result_f14193[aria-selected=true] {
+.result_e3c1c6[aria-selected=true] {
 	background-color: var(--background-mentioned);
 }
 /* Search popup unread results */
-.result_f14193 {
+.result_e3c1c6 {
 	--header-primary: var(--highlight);
 	--text-muted: var(--interactive-muted);
 }
@@ -631,8 +631,8 @@ code {
 }
 
 /* Bot labels */
-.botText_a02df3,
-.botTagVerified_a02df3 path {
+.botText_a9e77f,
+.botTagVerified_a9e77f path {
 	color: var(--background);
 	fill: var(--background);
 }
@@ -672,7 +672,7 @@ code {
 	--channels-default: var(--highlight);
 }
 /* Set max width for category name */
-.container_cc72c1 .overflow_c74e70 {
+.container_cc72c1 .overflow_a82120 {
 	max-width: 10vw;
 }
 /* Left-side line */
@@ -736,7 +736,7 @@ code {
 	border: 1px solid var(--highlight);
 }
 /* Scrollable inner text area */
-.scrollableContainer_d0696b {
+.scrollableContainer_bdf0de {
 	background-color: transparent
 }
 /* Reply bar and thread suggestions */
@@ -744,13 +744,13 @@ code {
 	background-color: rgba(var(--rgb-highlight), 20%) !important
 }
 /* Uploaded file buttons */
-.actionBar_df1eaf .wrapper_ef319f {
+.actionBar_df1eaf .wrapper_f7e168 {
 	border: 1px solid var(--highlight);
 	background-color: var(--background-floating);
 }
 
 /* Username color in chats where name isn't colored */
-.chatContent_a7d72e .username_ec86aa {
+.chatContent_a7d72e .username_f9f2ca {
 	--header-primary: var(--highlight);
 	--header-secondary: var(--highlight);
 }
@@ -798,29 +798,29 @@ code {
 	background-color: var(--background);
 }
 /* Unread divider */
-.isUnread_fc5f50 {
+.isUnread_c2654d {
 	color: var(--highlight);
 	background-color: var(--highlight);
 	border: 1px solid var(--highlight);
 	--divider-color: var(--highlight);
 }
 /* Unread date container */
-.isUnread_fc5f50 .content_c2654d {
+.isUnread_c2654d .content_c2654d {
 	color: var(--highlight);
 	background-color: var(--background);
 }
 /* "New" label */
-.unreadPill_fc5f50 {
+.unreadPill_c2654d {
 	color: var(--background) !important;
 	right: -1px;
 }
 /* "New" label left edge */
-.unreadPillCapStroke_fc5f50 {
+.unreadPillCapStroke_c2654d {
 	color: var(--highlight);
 	fill: var(--highlight)
 }
 /* Unread mentions bar (not tested) */
-.bar_edc096 {
+.bar_edf32f {
 	background-color: var(--highlight);
 	color: var(--background)
 }
@@ -853,11 +853,11 @@ code {
 	--brand-100: #ffffffce;
 }
 /* Inverted button styles */
-.lookInverted_ee4261.colorBrand_b2253e {
+.lookInverted_a299dc.colorBrand_dd4f85 {
 	--brand-experiment: hsl(var(--brand-500-hsl) / 1);
 	--brand: hsl(var(--brand-500-hsl) / 1);
 }
-.lookInverted_ee4261.colorBrand_b2253e:hover {
+.lookInverted_a299dc.colorBrand_dd4f85:hover {
 	--brand-experiment-100: #e1e1ec;
 	--brand-100: #e1e1ec;
 }
@@ -935,7 +935,7 @@ code {
 .container_b01337, .container_d7c696, .container_a2e886, /* Family activity cards */
 .linkingBannerParent_f70f48, .box_f70f48, /* User's family cards */
 .connectContainer_e2a436, .connection_e2a436, /* Discord account connections */
-.perkCard_d611db, .innerWrapper_c511e4, /* Nitro perks cards and buttons popup */
+.perkCard_d611db, .innerWrapperV1_c511e4, /* Nitro perks cards and buttons popup */
 .recommendedServerCard_ebbdfd, .wrapper_d4ec61, /* Server boost cards */
 .faq_eaedb7 { /* FAQ */
 	background-color: rgba(var(--rgb-background), 40%);
@@ -984,7 +984,7 @@ code {
 
 /* Left sidebar bottom */
 .info_c5a741:last-child::after {
-	content: "Dark Neon by xy0505 (2.1.1)";
+	content: "Dark Neon by xy0505 (2.1.2)";
 	font-size: 12px;
 	line-height: 16px;
 	color: var(--text);
