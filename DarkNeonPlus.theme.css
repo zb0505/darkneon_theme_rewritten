@@ -392,12 +392,14 @@ code {
 /* People list, current user controls and profile outer layer */
 .userProfileOuterThemed_c69a7b, /* Profile outer layer (for Nitro users) */
 .peopleList_e0840f, /* People list (friends tab) */
-.panels_a4d4d9 { /* Current user controls (voice and settings buttons) */
+.panels_a4d4d9, /* Current user controls (with username) */
+.lottieIcon_f73ef7 :not(defs *)[fill][fill-opacity] { /* Current user controls (voice and settings buttons) */
 	--header-primary: var(--text-normal);
 	--header-secondary: var(--text-normal);
 	--background-primary: var(--background-message-hover);
 	--background-secondary: var(--background-mentioned);
 	--background-secondary-alt: transparent;
+	--channel-icon: rgb(from var(--highlight) r g b / 50%);
 }
 
 /* Checkbox styles (eg. in create group chat) */
