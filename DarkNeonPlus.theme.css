@@ -51,7 +51,7 @@
 	/* Blurs the image which helps with readability of text infront of it */
 	--background-blur: 0px;
 	/* Changes the background image brightness */
-	--background-brightness: 30%;
+	--background-brightness: 20%;
 }
 /* END OF CUSTOMIZATION */
 
@@ -77,7 +77,6 @@
 	--afk-color: rgb(var(--rgb-afk-color));
 	--dnd-color: rgb(var(--rgb-dnd-color));
 	--streaming-color: rgb(var(--rgb-streaming-color));
-	--bg-brand: rgba(var(--rgb-highlight), 70%);
 	/* Scrollbar colors */
 	--scrollbar-thin-thumb: var(--highlight);
 	--scrollbar-auto-thumb: var(--highlight);
@@ -91,9 +90,13 @@
 	--bg-overlay-1: transparent;
 	--bg-overlay-2: transparent;
 	--bg-overlay-3: transparent;
+	--bg-brand: rgba(var(--rgb-highlight), 70%);
+	--bg-mod-subtle: rgba(var(--rgb-highlight), 10%);
 	--background-surface-high: var(--background-floating);
 	--background-surface-higher: var(--background-floating);
 	--background-surface-highest: var(--background-floating);
+	--autocomplete-bg: var(--background-floating);
+	--bg-overlay-selected: rgba(var(--rgb-highlight), 10%);
 	/* Background colors */
 	--background-primary: transparent;
 	--background-mobile-primary: transparent;
@@ -104,12 +107,17 @@
 	--background-accent: var(--background-message-automod-hover);
 	--background-floating: rgba(var(--rgb-background), 80%);
 	--background-nested-floating: transparent;
+	--card-primary-bg: var(--background-floating);
 	/* Background modifiers */
 	--background-modifier-accent: rgba(var(--rgb-highlight), 20%);
 	--background-modifier-hover: rgba(var(--rgb-highlight), 10%);
 	--background-modifier-active: rgba(var(--rgb-highlight), 30%);
 	--background-modifier-selected: var(--rgb-highlight);
 	--background-mod-subtle: rgba(var(--rgb-background), 20%);
+	--background-base-low: transparent;
+	--background-base-lower: transparent;
+	--background-base-lowest: transparent;
+	--background-mod-normal: rgba(var(--rgb-highlight), 10%);
 	/* Modal and card backgrounds */
 	--modal-background: rgba(var(--rgb-background), 80%);
 	--modal-footer-background: transparent;
@@ -128,6 +136,9 @@
 	--logo-primary: var(--highlight);
 	--control-brand-foreground: var(--highlight);
 	--control-brand-foreground-new: var(--highlight);
+	--border-subtle: rgba(var(--rgb-highlight), 10%);
+	--app-border-frame: rgba(var(--rgb-highlight), 10%);
+	--border-faint: rgba(var(--rgb-highlight), 20%);
 	/* Mention and message hover colors */
 	--background-mentioned: rgba(var(--rgb-highlight), 30%);
 	--background-mentioned-hover: rgba(var(--rgb-highlight), 20%);
@@ -137,6 +148,8 @@
 	--background-message-automod: rgba(var(--rgb-highlight), 20%);
 	--background-message-automod-hover: rgba(var(--rgb-highlight), 40%);
 	--channeltextarea-background: var(--background);
+	--mention-foreground: var(--highlight);
+	--mention-background: rgba(var(--rgb-highlight), 20%);
 	/* Link and text colors */
 	--text-primary: var(--highlight);
 	--text-link: var(--highlight);
@@ -148,9 +161,15 @@
 	--text-normal: var(--text);
 	--text-muted: var(--text);
 	--text-default: var(--highlight);
-	/* Channel icon, members name color and message reaction colors */
-	--icon-primary: var(--highlight);
-	--channels-default: rgba(var(--rgb-highlight), 50%);
+	--text-feedback-positive: var(--online-color);
+	/* Other colors */
+	--icon-primary: var(--highlight); /* Active channel icon */
+	--icon-secondary: rgba(var(--rgb-highlight), 80%); /* Top left icons (hover) */
+	--icon-tertiary: rgba(var(--rgb-highlight), 50%); /* Top left icons */
+	--channel-icon: rgba(var(--rgb-highlight), 50%); /* Basic channel icon */
+	--channels-default: rgba(var(--rgb-highlight), 50%); /* Members' name */
+	--checkbox-border-checked: var(--highlight);
+	--checkbox-background-checked: rgba(var(--rgb-highlight), 75%);
 	--message-reacted-text: var(--highlight);
 	--message-reacted-background: rgba(var(--rgb-highlight), 20%);
 	/* Red button regular styles */
@@ -335,7 +354,7 @@
 	--brand-experiment-95a: rgba(var(--rgb-highlight), 0.95);
 	/* Other colors */
 	--brand-500: var(--button-brand-background-hover); /* Icon color for partnered servers and color for checkboxes */
-	--green-360: var(--button-positive-background-hover); /* Green verified icon for servers */
+	--green-360: rgba(from var(--online-color) r g b / 75%); /* Green verified icon for servers */
 	--primary-630: var(--modal-background); /* Modal backgrounds */
 }
 
@@ -373,6 +392,8 @@ code {
 .container__2637a, /* Server channel container */
 .shop__6db1d, /* New shop tab */
 .panels_c48ade, /* Current user with mic/deafen controllers */
+.panel__5dec7, /* Current user activity */
+.container_a55fdc, /* Streaming popup top part (would have a gradient background) */
 .container__133bf, /* Wrapper of right-side area (eg. friends and activities container) */
 .tabBody__133bf, /* Wrapper of right-side area (eg. friends and activities container) */
 .nowPlayingColumn__133bf, /* Activities sidebar on friends tab */
@@ -439,6 +460,24 @@ code {
 /* Chat and options buttons on friend list tab */
 .actionButton_f8fa06 {
 	--background-secondary: var(--background-tertiary);
+}
+
+/* Popout menus and backdrop */
+.menu_c1e9c4:not(#account, #status) {
+	--header-primary: var(--interactive-normal);
+}
+.menu_c1e9c4:not(#account, #status) .focused_c1e9c4 {
+	--header-primary: var(--highlight);
+}
+.backdrop__78332 {
+	background-color: var(--background-floating) !important;
+}
+
+/* Soundboard popout */
+.picker__09f65 {
+	--background-base-low: var(--background-floating);
+	border: 1px solid var(--border-subtle);
+	padding: 5px;
 }
 
 /* Recent mentions, pinned messages and threads popout */
@@ -862,6 +901,11 @@ code {
 }
 .categoryFadeBlurple_d02962:hover {
 	background-color: var(--brand-experiment-15a) !important;
+}
+
+/* Search result cards */
+.searchResult__02a39:hover {
+	background-color: var(--background-mentioned-hover);
 }
 
 
