@@ -1,7 +1,7 @@
 /**
  * @name Collapsible Members List Plus
  * @author xy0505
- * @version 2.1.1
+ * @version 2.2.0
  * @source https://github.com/zb0505/darkneon_theme_rewritten
  * @website https://github.com/zb0505/darkneon_theme_rewritten
  * @description A plugin to have a collapsible member list in servers. Should be used as @import to have it update automatically
@@ -17,7 +17,7 @@
 :root {
 	--transition-time: .3s; /* Animation time */
 	--hidden-user-width: 60px; /* Collapsed width (should not be edited) */
-	--user-width: 240px; /* Opened width (should not be edited) */
+	--user-width: 265px; /* Opened width (should not be edited) */
 }
 /* END OF CUSTOMIZATION */
 
@@ -29,29 +29,45 @@
 =======================================================================
 */
 /* Member list container collapsed */
-.container_c8ffbb, /* DM & server */
-.membersWrap_c8ffbb { /* Server */
+.container_c8ffbb, /* DM & Server */
+.visual-refresh .container_c8ffbb {
 	transition-duration: var(--transition-time);
+}
+.container_c8ffbb:not(:hover),
+.visual-refresh .container_c8ffbb:not(:hover) {
+	width: var(--hidden-user-width);
 	justify-content: unset;
 	min-width: unset;
-	width: var(--hidden-user-width);
 }
-/* Role/group names collapsed */
-.membersGroup_c8ffbb {
-	height: 0px;
+
+/* Role/group names and activity cards collapsed */
+.membersGroup_c8ffbb, .visual-refresh .membersGroup_c8ffbb,
+.container__0f2e8, .visual-refresh .container__0f2e8 {
 	transition-duration: var(--transition-time);
-	padding-top: 0px;
+}
+
+.container_c8ffbb:not(:hover) .membersGroup_c8ffbb,
+.visual-refresh .container_c8ffbb:not(:hover) .membersGroup_c8ffbb,
+.container_c8ffbb:not(:hover) .container__0f2e8,
+.visual-refresh .container_c8ffbb:not(:hover) .container__0f2e8 {
+	height: 0px;
+	padding: 0px;
+	margin: 0px;
 	overflow: hidden;
 }
 
+/* Remove padding from user icons when collapsed */
+.container_c8ffbb:not(:hover) .member__5d473 {
+	margin: 0px;
+}
+
+
 /* Role/group names opened */
-.container_c8ffbb:hover .membersGroup_c8ffbb, /* DM & server */
-.membersWrap_c8ffbb:hover .membersGroup_c8ffbb { /* Server */
+.container_c8ffbb:hover .membersGroup_c8ffbb { /* DM & Server */
 	height: 40px;
 	padding-top: 24px;
 }
 /* Member list container opened */
-.container_c8ffbb:hover, /* DM & server */
-.membersWrap_c8ffbb:hover { /* Server */
+.container_c8ffbb:hover {/* DM & Server */
 	width: var(--user-width);
 }

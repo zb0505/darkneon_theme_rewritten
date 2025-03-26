@@ -1,7 +1,7 @@
 /**
  * @name Dark Neon Plus
  * @author xy0505
- * @version 2.1.3
+ * @version 2.2.0
  * @source https://github.com/zb0505/darkneon_theme_rewritten
  * @website https://github.com/zb0505/darkneon_theme_rewritten
  * @description A dark theme with bright neon-y colors and a background image. Should be used via templates to have it update automatically (this has the same colors as the Blue template)
@@ -51,7 +51,7 @@
 	/* Blurs the image which helps with readability of text infront of it */
 	--background-blur: 0px;
 	/* Changes the background image brightness */
-	--background-brightness: 20%;
+	--background-brightness: 30%;
 }
 /* END OF CUSTOMIZATION */
 
@@ -64,7 +64,9 @@
 */
 :root,
 .theme-dark,
-.theme-light {
+.theme-light,
+.visual-refresh.theme-darker, .visual-refresh .theme-darker,
+.visual-refresh.theme-midnight, .visual-refresh .theme-midnight {
 	/* Base colors */
 	--highlight: rgb(var(--rgb-highlight));
 	--background: rgb(var(--rgb-background));
@@ -75,6 +77,7 @@
 	--afk-color: rgb(var(--rgb-afk-color));
 	--dnd-color: rgb(var(--rgb-dnd-color));
 	--streaming-color: rgb(var(--rgb-streaming-color));
+	--bg-brand: rgba(var(--rgb-highlight), 70%);
 	/* Scrollbar colors */
 	--scrollbar-thin-thumb: var(--highlight);
 	--scrollbar-auto-thumb: var(--highlight);
@@ -88,6 +91,9 @@
 	--bg-overlay-1: transparent;
 	--bg-overlay-2: transparent;
 	--bg-overlay-3: transparent;
+	--background-surface-high: var(--background-floating);
+	--background-surface-higher: var(--background-floating);
+	--background-surface-highest: var(--background-floating);
 	/* Background colors */
 	--background-primary: transparent;
 	--background-mobile-primary: transparent;
@@ -103,6 +109,7 @@
 	--background-modifier-hover: rgba(var(--rgb-highlight), 10%);
 	--background-modifier-active: rgba(var(--rgb-highlight), 30%);
 	--background-modifier-selected: var(--rgb-highlight);
+	--background-mod-subtle: rgba(var(--rgb-background), 20%);
 	/* Modal and card backgrounds */
 	--modal-background: rgba(var(--rgb-background), 80%);
 	--modal-footer-background: transparent;
@@ -131,6 +138,7 @@
 	--background-message-automod-hover: rgba(var(--rgb-highlight), 40%);
 	--channeltextarea-background: var(--background);
 	/* Link and text colors */
+	--text-primary: var(--highlight);
 	--text-link: var(--highlight);
 	--text-link-low-saturation: rgba(var(--rgb-highlight), 50%);
 	--text-positive: var(--online-color);
@@ -139,18 +147,24 @@
 	--text-brand: var(--highlight);
 	--text-normal: var(--text);
 	--text-muted: var(--text);
+	--text-default: var(--highlight);
+	/* Channel icon, members name color and message reaction colors */
+	--icon-primary: var(--highlight);
+	--channels-default: rgba(var(--rgb-highlight), 50%);
+	--message-reacted-text: var(--highlight);
+	--message-reacted-background: rgba(var(--rgb-highlight), 20%);
 	/* Red button regular styles */
 	--button-danger-background-disabled: rgba(var(--rgb-close-button), 20%);
 	--button-danger-background: rgba(var(--rgb-close-button), 20%);
-	--button-danger-background-hover: rgba(var(--rgb-close-button), 70%);
+	--button-danger-background-hover: rgba(var(--rgb-close-button), 50%);
 	--button-danger-background-active: rgba(var(--rgb-close-button), 100%);
 	/* Red outlined button styles */
 	--button-outline-danger-border: rgba(var(--rgb-close-button), 50%);
-	--button-outline-danger-background: rgba(var(--rgb-close-button), 50%);
-	--button-outline-danger-background-hover: rgba(var(--rgb-close-button), 70%);
+	--button-outline-danger-background: transparent;
+	--button-outline-danger-background-hover: rgba(var(--rgb-close-button), 50%);
 	--button-outline-danger-background-active: rgba(var(--rgb-close-button), 100%);
 	/* Red outlined button text and border colors */
-	--button-outline-danger-text: rgba(var(--rgb-close-button), 50%);
+	--button-outline-danger-text: rgba(var(--rgb-close-button), 100%);
 	--button-outline-danger-text-hover: rgba(var(--text-brand), 70%);
 	--button-outline-danger-text-active: rgba(var(--text-brand), 100%);
 	--button-outline-danger-border-hover: rgba(var(--rgb-close-button), 70%);
@@ -158,15 +172,15 @@
 	/* Green button regular styles */
 	--button-positive-background-disabled: rgba(var(--rgb-online-color), 20%);
 	--button-positive-background: rgba(var(--rgb-online-color), 20%);
-	--button-positive-background-hover: rgba(var(--rgb-online-color), 70%);
+	--button-positive-background-hover: rgba(var(--rgb-online-color), 50%);
 	--button-positive-background-active: rgba(var(--rgb-online-color), 100%);
 	/* Green outlined button styles */
 	--button-outline-positive-border: rgba(var(--rgb-online-color), 50%);
-	--button-outline-positive-background: rgba(var(--rgb-online-color), 50%);
-	--button-outline-positive-background-hover: rgba(var(--rgb-online-color), 70%);
+	--button-outline-positive-background: transparent;
+	--button-outline-positive-background-hover: rgba(var(--rgb-online-color), 50%);
 	--button-outline-positive-background-active: rgba(var(--rgb-online-color), 100%);
 	/* Green outlined button text and border colors */
-	--button-outline-positive-text: rgba(var(--rgb-online-color), 50%);
+	--button-outline-positive-text: rgba(var(--rgb-online-color), 100%);
 	--button-outline-positive-text-hover: rgba(var(--text-brand), 70%);
 	--button-outline-positive-text-active: rgba(var(--text-brand), 100%);
 	--button-outline-positive-border-hover: rgba(var(--rgb-online-color), 70%);
@@ -174,15 +188,15 @@
 	/* Default primary button regular styles */
 	--button-primary-background-disabled: rgba(var(--rgb-highlight), 20%);
 	--button-primary-background: rgba(var(--rgb-highlight), 20%);
-	--button-primary-background-hover: rgba(var(--rgb-highlight), 70%);
+	--button-primary-background-hover: rgba(var(--rgb-highlight), 50%);
 	--button-primary-background-active: rgba(var(--rgb-highlight), 100%);
 	/* Default primary outlined button styles */
 	--button-outline-primary-border: rgba(var(--rgb-highlight), 50%);
-	--button-outline-primary-background: rgba(var(--rgb-highlight), 50%);
-	--button-outline-primary-background-hover: rgba(var(--rgb-highlight), 70%);
+	--button-outline-primary-background: transparent;
+	--button-outline-primary-background-hover: rgba(var(--rgb-highlight), 50%);
 	--button-outline-primary-background-active: rgba(var(--rgb-highlight), 100%);
 	/* Default primary outlined button text and border colors */
-	--button-outline-primary-text: rgba(var(--rgb-highlight), 50%);
+	--button-outline-primary-text: rgba(var(--rgb-highlight), 100%);
 	--button-outline-primary-text-hover: rgba(var(--text-brand), 70%);
 	--button-outline-primary-text-active: rgba(var(--text-brand), 100%);
 	--button-outline-primary-border-hover: rgba(var(--rgb-highlight), 70%);
@@ -190,15 +204,15 @@
 	/* Default secondary button regular styles */
 	--button-secondary-background-disabled: rgba(var(--rgb-highlight), 20%);
 	--button-secondary-background: rgba(var(--rgb-highlight), 20%);
-	--button-secondary-background-hover: rgba(var(--rgb-highlight), 70%);
+	--button-secondary-background-hover: rgba(var(--rgb-highlight), 50%);
 	--button-secondary-background-active: rgba(var(--rgb-highlight), 100%);
 	/* Default secondary outlined button styles */
 	--button-outline-secondary-border: rgba(var(--rgb-highlight), 50%);
-	--button-outline-secondary-background: rgba(var(--rgb-highlight), 50%);
-	--button-outline-secondary-background-hover: rgba(var(--rgb-highlight), 70%);
+	--button-outline-secondary-background: transparent;
+	--button-outline-secondary-background-hover: rgba(var(--rgb-highlight), 50%);
 	--button-outline-secondary-background-active: rgba(var(--rgb-highlight), 100%);
 	/* Default secondary outlined button text and border colors */
-	--button-outline-secondary-text: rgba(var(--rgb-highlight), 50%);
+	--button-outline-secondary-text: rgba(var(--rgb-highlight), 100%);
 	--button-outline-secondary-text-hover: rgba(var(--text-brand), 70%);
 	--button-outline-secondary-text-active: rgba(var(--text-brand), 100%);
 	--button-outline-secondary-border-hover: rgba(var(--rgb-highlight), 70%);
@@ -206,15 +220,15 @@
 	/* Blurple button regular styles */
 	--button-brand-background-disabled: rgba(var(--rgb-highlight), 20%);
 	--button-brand-background: rgba(var(--rgb-highlight), 20%);
-	--button-brand-background-hover: rgba(var(--rgb-highlight), 70%);
+	--button-brand-background-hover: rgba(var(--rgb-highlight), 50%);
 	--button-brand-background-active: rgba(var(--rgb-highlight), 100%);
 	/* Blurple outlined button styles */
 	--button-outline-brand-border: rgba(var(--rgb-highlight), 50%);
-	--button-outline-brand-background: rgba(var(--rgb-highlight), 50%);
-	--button-outline-brand-background-hover: rgba(var(--rgb-highlight), 70%);
+	--button-outline-brand-background: transparent;
+	--button-outline-brand-background-hover: rgba(var(--rgb-highlight), 50%);
 	--button-outline-brand-background-active: rgba(var(--rgb-highlight), 100%);
 	/* Blurple outlined button text and border colors */
-	--button-outline-brand-text: rgba(var(--rgb-highlight), 50%);
+	--button-outline-brand-text: rgba(var(--rgb-highlight), 100%);
 	--button-outline-brand-text-hover: rgba(var(--text-brand), 70%);
 	--button-outline-brand-text-active: rgba(var(--text-brand), 100%);
 	--button-outline-brand-border-hover: rgba(var(--rgb-highlight), 70%);
@@ -328,11 +342,12 @@
 /* ============ App base styles ============ */
 /* Set background image */
 body {
-	background-color: var(--background);
-	background-image: var(--background-image);
-	background-position: var(--background-position);
-	background-size: var(--background-size);
-	backdrop-filter: blur(var(--background-blur)) brightness(var(--background-brightness))
+	background: var(--background) !important;
+	background-color: var(--background) !important;
+	background-image: var(--background-image) !important;
+	background-position: var(--background-position) !important;
+	background-size: var(--background-size) !important;
+	backdrop-filter: blur(var(--background-blur)) brightness(var(--background-brightness));
 }
 
 /* Code block styles */
@@ -355,11 +370,13 @@ code {
 .footer__214dc, /* Explore button under guilds in sidebar */
 .scroller__99e7c, /* Unknown */
 .sidebar_c48ade, /* Private/server channels container */
-.container_c48ade, /* Unknown */
+.container__2637a, /* Server channel container */
 .shop__6db1d, /* New shop tab */
 .panels_c48ade, /* Current user with mic/deafen controllers */
 .container__133bf, /* Wrapper of right-side area (eg. friends and activities container) */
+.tabBody__133bf, /* Wrapper of right-side area (eg. friends and activities container) */
 .nowPlayingColumn__133bf, /* Activities sidebar on friends tab */
+.popout_af3b89, /* Activity card popouts */
 .addFriendInputWrapper__72ba7, /* Add friend input */
 .chat_f75fb0, /* Main chat wrapper */
 .chatContent_f75fb0, /* Chat content */
@@ -380,12 +397,14 @@ code {
 .scroller__7d20c, /* Unknown */
 .standardSidebarView__23e6b, /* Unknown */
 .sidebarRegionScroller__23e6b, /* Settings menu left sidebar */
+.contentRegionScroller__23e6b, /* Settings menu right side */
 .wrapper_b1e4f3, /* Slash command popout left side bot icon container */
 .wrapper__4e6ce, /* Below previous */
 .upload_aa605f, /* Uploaded file background */
 .background__1fed1, /* Account settings profile preview */
 .background__1fed1 *:not(.lookLink__201d5, .lookFilled__201d5),
 .userProfileOuterUnthemed_c69a7b > div {
+	background: transparent !important;
 	background-color: rgba(0, 0, 0, 0) !important
 }
 
@@ -458,12 +477,12 @@ code {
 }
 
 /* Expanded server folder background */
-.expandedFolderBackground__48112 {
-	background-color: #00000055;
+.expandedFolderBackground__48112, .visual-refresh .expandedFolderBackground__48112 {
+	background-color: rgba(from var(--background) r g b / 80%);
 }
 
 /* Server folder background modifier on hover */
-.folder__48112.hover__48112 {
+.folder__48112.hover__48112, .visual-refresh .folder__48112.hover__48112 {
 	background-color: var(--background-mentioned);
 }
 
@@ -541,7 +560,8 @@ code {
 }
 
 /* Online dot and online cellphone markers */
-.wrapper__44b0c rect[fill="#43b581"], /* Online dot */
+.wrapper__44b0c rect[fill="#43b581"], /* Online dot old color */
+.wrapper__44b0c rect[fill="#43a25a"], /* Online dot new color */
 .wrapper__44b0c rect[fill="#23a55a"], /* Online cellphone */
 .wrapper__44b0c rect[mask*=online] {
 	fill: var(--online-color)
@@ -551,8 +571,8 @@ code {
 }
 
 /* Idle/AFK marker */
-.wrapper__44b0c rect[fill="#f0b232"],
-.wrapper__44b0c rect[fill="#f0b232"],
+.wrapper__44b0c rect[fill="#f0b232"], /* Old AFK color */
+.wrapper__44b0c rect[fill="#ca9654"], /* New AFK color */
 .wrapper__44b0c rect[mask*=idle] {
 	fill: var(--afk-color)
 }
@@ -561,8 +581,8 @@ code {
 }
 
 /* Do not disturb marker */
-.wrapper__44b0c rect[fill="#f23f43"],
-.wrapper__44b0c rect[fill="#f23f43"],
+.wrapper__44b0c rect[fill="#f23f43"], /* Old DND color */
+.wrapper__44b0c rect[fill="#d83a42"], /* New DND color */
 .wrapper__44b0c rect[mask*=dnd] {
 	fill: var(--dnd-color)
 }
@@ -665,7 +685,7 @@ code {
 }
 
 
-/* ============ Server channel list ============ */
+/* ============ Server channel list and DM list ============ */
 /* Category container */
 .containerDefault__29444 {
 	display: flex;
@@ -766,9 +786,10 @@ code {
 	border: 1px solid #b2b2b22a !important;
 }
 /* User's reactions */
-.reaction__23977.reactionMe__23977 {
+.reaction__23977.reactionMe__23977, .visual-refresh .reaction__23977.reactionMe__23977 {
 	background-color: transparent;
 	color: var(--highlight);
+	border-color: var(--highlight);
 }
 
 /* Message hover effects */
@@ -879,7 +900,7 @@ code {
 	--background-secondary: var(--background-tertiary);
 }
 /* Sound button styles in popup */
-.soundButton__6d4ed {
+.soundButton__9be63 {
 	--background-secondary: transparent;
 	--background-tertiary: var(--background-message-hover);
 }
@@ -986,7 +1007,7 @@ code {
 
 /* Left sidebar bottom */
 .info__2debe:last-child::after {
-	content: "Dark Neon by xy0505 (2.1.3)";
+	content: "Dark Neon by xy0505 (2.2.0)";
 	font-size: 12px;
 	line-height: 16px;
 	color: var(--text);
