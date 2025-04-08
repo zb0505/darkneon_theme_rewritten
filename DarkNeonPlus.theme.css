@@ -600,7 +600,7 @@ code {
 
 /* Online dot and online cellphone markers */
 .wrapper__44b0c rect[fill="#43b581"], /* Online dot old color */
-.wrapper__44b0c rect[fill="#43a25a"], /* Online dot new color */
+.wrapper__44b0c rect[fill="#40a258"], /* Online dot new color */
 .wrapper__44b0c rect[fill="#23a55a"], /* Online cellphone */
 .wrapper__44b0c rect[mask*=online] {
 	fill: var(--online-color)
@@ -611,7 +611,7 @@ code {
 
 /* Idle/AFK marker */
 .wrapper__44b0c rect[fill="#f0b232"], /* Old AFK color */
-.wrapper__44b0c rect[fill="#ca9654"], /* New AFK color */
+.wrapper__44b0c rect[fill="#cc954c"], /* New AFK color */
 .wrapper__44b0c rect[mask*=idle] {
 	fill: var(--afk-color)
 }
@@ -621,7 +621,7 @@ code {
 
 /* Do not disturb marker */
 .wrapper__44b0c rect[fill="#f23f43"], /* Old DND color */
-.wrapper__44b0c rect[fill="#d83a42"], /* New DND color */
+.wrapper__44b0c rect[fill="#d83a41"], /* New DND color */
 .wrapper__44b0c rect[mask*=dnd] {
 	fill: var(--dnd-color)
 }
