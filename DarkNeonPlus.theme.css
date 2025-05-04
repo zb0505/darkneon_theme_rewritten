@@ -1,7 +1,7 @@
 /**
  * @name Dark Neon Plus
  * @author xy0505
- * @version 2.2.0
+ * @version 2.2.1
  * @source https://github.com/zb0505/darkneon_theme_rewritten
  * @website https://github.com/zb0505/darkneon_theme_rewritten
  * @description A dark theme with bright neon-y colors and a background image. Should be used via templates to have it update automatically (this has the same colors as the Blue template)
@@ -507,8 +507,8 @@ code {
 	border: 1px solid var(--highlight);
 }
 
-/* Guild list sidebar */
-.guilds_c48ade {
+/* Guild list sidebar + notification/selection indicator */
+.guilds_c48ade, .item__58105 {
 	--background-primary: var(--background);
 	--background-secondary: transparent;
 	--header-primary: var(--highlight);
@@ -516,12 +516,12 @@ code {
 }
 
 /* Expanded server folder background */
-.expandedFolderBackground__48112, .visual-refresh .expandedFolderBackground__48112 {
+.folderGroupBackground__48112, .visual-refresh .folderGroupBackground__48112 {
 	background-color: rgba(from var(--background) r g b / 80%);
 }
 
 /* Server folder background modifier on hover */
-.folder__48112.hover__48112, .visual-refresh .folder__48112.hover__48112 {
+.hiddenVisually__27f77.hover__48112, .visual-refresh .hiddenVisually__27f77.hover__48112 {
 	background-color: var(--background-mentioned);
 }
 
@@ -595,38 +595,40 @@ code {
 .wrapper__44b0c rect[fill="#593695"],
 .wrapper__44b0c rect[fill="#593695"],
 .wrapper__44b0c rect[mask*=streaming] {
-	fill: var(--streaming-color)
+	fill: var(--streaming-color);
 }
 
 /* Online dot and online cellphone markers */
-.wrapper__44b0c rect[fill="#43b581"], /* Online dot old color */
-.wrapper__44b0c rect[fill="#40a258"], /* Online dot new color */
+.wrapper__44b0c rect[fill="#43a25a"], /* Online dot color */
 .wrapper__44b0c rect[fill="#23a55a"], /* Online cellphone */
 .wrapper__44b0c rect[mask*=online] {
-	fill: var(--online-color)
+	fill: var(--online-color);
 }
-.status_a423bd[style^="background-color: rgb(35, 165, 90);"] {
+.status_a423bd[style^="background-color: rgb(67, 162, 90);"] {
 	background-color: var(--online-color) !important;
 }
 
 /* Idle/AFK marker */
-.wrapper__44b0c rect[fill="#f0b232"], /* Old AFK color */
-.wrapper__44b0c rect[fill="#cc954c"], /* New AFK color */
+.wrapper__44b0c rect[fill="#ca9654"], /* AFK color */
 .wrapper__44b0c rect[mask*=idle] {
-	fill: var(--afk-color)
+	fill: var(--afk-color);
 }
-.status_a423bd[style^="background-color: rgb(240, 178, 50);"] {
+.status_a423bd[style^="background-color: rgb(202, 150, 84);"] {
 	background-color: var(--afk-color) !important;
 }
 
 /* Do not disturb marker */
-.wrapper__44b0c rect[fill="#f23f43"], /* Old DND color */
-.wrapper__44b0c rect[fill="#d83a41"], /* New DND color */
+.wrapper__44b0c rect[fill="#d83a42"], /* DND color */
 .wrapper__44b0c rect[mask*=dnd] {
-	fill: var(--dnd-color)
+	fill: var(--dnd-color);
 }
-.status_a423bd[style^="background-color: rgb(242, 63, 67);"] {
+.status_a423bd[style^="background-color: rgb(216, 58, 66);"] {
 	background-color: var(--dnd-color) !important;
+}
+
+/* Now playing icon */
+.icon_c9d15c path[fill="#43a25a"] {
+	fill: var(--online-color);
 }
 
 
@@ -1051,7 +1053,7 @@ code {
 
 /* Left sidebar bottom */
 .info__2debe:last-child::after {
-	content: "Dark Neon by xy0505 (2.2.0)";
+	content: "Dark Neon by xy0505 (2.2.1)";
 	font-size: 12px;
 	line-height: 16px;
 	color: var(--text);
