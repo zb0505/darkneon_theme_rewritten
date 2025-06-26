@@ -160,7 +160,7 @@
 	--text-brand: var(--highlight);
 	--text-normal: var(--text);
 	--text-muted: var(--text);
-	--text-default: var(--highlight);
+	--text-default: var(--text);
 	--text-feedback-positive: var(--online-color);
 	/* Other colors */
 	--icon-primary: var(--highlight); /* Active channel icon */
@@ -739,6 +739,11 @@ div[style*="background-color: rgb(216, 58, 66)"] {
 
 
 /* ============ Server channel list and DM list ============ */
+/*  */
+.interactive__972a0:active, .interactiveSelected__972a0 {
+	color: var(--text-link);
+}
+
 /* Category container */
 .containerDefault__29444 {
 	display: flex;
