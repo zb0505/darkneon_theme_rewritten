@@ -1,7 +1,7 @@
 /**
  * @name Dark Neon Plus
  * @author xy0505
- * @version 2.2.1
+ * @version 2.2.2
  * @source https://github.com/zb0505/darkneon_theme_rewritten
  * @website https://github.com/zb0505/darkneon_theme_rewritten
  * @description A dark theme with bright neon-y colors and a background image. Should be used via templates to have it update automatically (this has the same colors as the Blue template)
@@ -607,6 +607,10 @@ code {
 .status_a423bd[style^="background-color: rgb(67, 162, 90);"] {
 	background-color: var(--online-color) !important;
 }
+/* Online typing indicator (for some reason the .status class is missing in group chats) */
+div[style*="background-color: rgb(67, 162, 90)"] {
+	background-color: var(--online-color) !important;
+}
 
 /* Idle/AFK marker */
 .wrapper__44b0c rect[fill="#ca9654"], /* AFK color */
@@ -616,6 +620,10 @@ code {
 .status_a423bd[style^="background-color: rgb(202, 150, 84);"] {
 	background-color: var(--afk-color) !important;
 }
+/* Idle/AFK typing indicator (for some reason the .status class is missing in group chats) */
+div[style*="background-color: rgb(202, 150, 84)"] {
+	background-color: var(--afk-color) !important;
+}
 
 /* Do not disturb marker */
 .wrapper__44b0c rect[fill="#d83a42"], /* DND color */
@@ -623,6 +631,10 @@ code {
 	fill: var(--dnd-color);
 }
 .status_a423bd[style^="background-color: rgb(216, 58, 66);"] {
+	background-color: var(--dnd-color) !important;
+}
+/* DND typing indicator (for some reason the .status class is missing in group chats) */
+div[style*="background-color: rgb(216, 58, 66)"] {
 	background-color: var(--dnd-color) !important;
 }
 
@@ -1004,7 +1016,7 @@ code {
 .container__5dbf8, .container__8cc9a, .container__5b321, /* Family activity cards */
 .linkingBannerParent_d9914b, .box_d9914b, /* User's family cards */
 .connectContainer_c7f964, .connection_c7f964, /* Discord account connections */
-.perkCard_b62c4e, .innerWrapperV1__70f7f, /* Nitro perks cards and buttons popup */
+.perkCard_b62c4e, .innerWrapper__70f7f, /* Nitro perks cards and buttons popup */
 .recommendedServerCard__51537, .wrapper__37ae5, /* Server boost cards */
 .faq__744ff { /* FAQ */
 	background-color: rgba(var(--rgb-background), 40%);
@@ -1053,7 +1065,7 @@ code {
 
 /* Left sidebar bottom */
 .info__2debe:last-child::after {
-	content: "Dark Neon by xy0505 (2.2.1)";
+	content: "Dark Neon by xy0505 (2.2.2)";
 	font-size: 12px;
 	line-height: 16px;
 	color: var(--text);
