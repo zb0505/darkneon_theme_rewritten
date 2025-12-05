@@ -1,7 +1,7 @@
 /**
  * @name Dark Neon Plus
  * @author xy0505
- * @version 2.2.2
+ * @version 2.2.3
  * @source https://github.com/zb0505/darkneon_theme_rewritten
  * @website https://github.com/zb0505/darkneon_theme_rewritten
  * @description A dark theme with bright neon-y colors and a background image. Should be used via templates to have it update automatically (this has the same colors as the Blue template)
@@ -108,6 +108,7 @@
 	--background-floating: rgba(var(--rgb-background), 80%);
 	--background-nested-floating: transparent;
 	--card-primary-bg: var(--background-floating);
+	--user-profile-overlay-background: var(--background-tertiary);
 	/* Background modifiers */
 	--background-modifier-accent: rgba(var(--rgb-highlight), 20%);
 	--background-modifier-hover: rgba(var(--rgb-highlight), 10%);
@@ -152,6 +153,7 @@
 	--mention-background: rgba(var(--rgb-highlight), 20%);
 	/* Link and text colors */
 	--text-primary: var(--highlight);
+	--text-strong: var(--highlight);
 	--text-link: var(--highlight);
 	--text-link-low-saturation: rgba(var(--rgb-highlight), 50%);
 	--text-positive: var(--online-color);
@@ -385,13 +387,13 @@ code {
 .app__160d8, /* Below previous */
 .app__160d8, /* Below previous */
 .bg__960e4, /* Below previous */
-.guilds_c48ade, /* Guild sidebar */
+.guilds__5e434, /* Guild sidebar */
 .footer__214dc, /* Explore button under guilds in sidebar */
 .scroller__99e7c, /* Unknown */
-.sidebar_c48ade, /* Private/server channels container */
+.sidebar__5e434, /* Private/server channels container */
 .container__2637a, /* Server channel container */
 .shop__6db1d, /* New shop tab */
-.panels_c48ade, /* Current user with mic/deafen controllers */
+.panels__5e434, /* Current user with mic/deafen controllers */
 .panel__5dec7, /* Current user activity */
 .container_a55fdc, /* Streaming popup top part (would have a gradient background) */
 .container__133bf, /* Wrapper of right-side area (eg. friends and activities container) */
@@ -404,7 +406,7 @@ code {
 .title_f75fb0, /* Chat title */
 .container_fed6d3, /* GIF popout background*/
 .header_fed6d3, /* GIF popout search background */
-.searchBar__35e86, /* Search bar (above private chats) */
+.searchBar_e6b769, /* Search bar (above private chats) */
 .members_c8ffbb, /* Server members sidebar */
 .searchResultsWrap_a9e706, /* Server search sidebar */
 .container_c8ffbb, /* Unknown */
@@ -414,25 +416,25 @@ code {
 .threadSuggestionBar__841c8, /* Unknown, it was next to .replyBar in Discord's CSS */
 .stackedBars__74017, /* Wrapper of .replyBar */
 .container__841c8, /* Unknown */
-.privateChannels__35e86, /* Private channels container */
+.privateChannels_e6b769, /* Private channels container */
 .scroller__7d20c, /* Unknown */
 .standardSidebarView__23e6b, /* Unknown */
 .sidebarRegionScroller__23e6b, /* Settings menu left sidebar */
 .contentRegionScroller__23e6b, /* Settings menu right side */
 .wrapper_b1e4f3, /* Slash command popout left side bot icon container */
-.wrapper__4e6ce, /* Below previous */
+.wrapper__4106a, /* Below previous */
 .upload_aa605f, /* Uploaded file background */
 .background__1fed1, /* Account settings profile preview */
 .background__1fed1 *:not(.lookLink__201d5, .lookFilled__201d5),
-.userProfileOuterUnthemed_c69a7b > div {
+.user-profile-modal-v2:not(.custom-theme-background) > div /* User profile inner layer */ {
 	background: transparent !important;
 	background-color: rgba(0, 0, 0, 0) !important
 }
 
 /* People list, current user controls and profile outer layer */
-.userProfileOuterThemed_c69a7b, /* Profile outer layer (for Nitro users) */
+.user-profile-modal-v2.custom-theme-background, /* Profile outer layer (for Nitro users) */
 .peopleList__5ec2f, /* People list (friends tab) */
-.panels_c48ade, /* Current user controls (with username) */
+.panels__5e434, /* Current user controls (with username) */
 .lottieIcon__5eb9b :not(defs *)[fill][fill-opacity] { /* Current user controls (voice and settings buttons) */
 	--header-primary: var(--text-normal);
 	--header-secondary: var(--text-normal);
@@ -448,7 +450,7 @@ code {
 }
 
 /* Tooltip styles */
-.tooltip__382e7 {
+.tooltip_c36707 {
 	--background-nested-floating: var(--modal-background);
 }
 
@@ -482,7 +484,7 @@ code {
 
 /* Recent mentions, pinned messages and threads popout */
 .recentMentionsPopout__95796, /* Recent mentions */
-.messagesPopoutWrap__45690, /* Pinned messages */
+.messagesPopoutWrap_e8b59c, /* Pinned messages */
 .container_d9c882 { /* Threads popout */
 	--background-secondary: var(--background-floating);
 }
@@ -497,18 +499,18 @@ code {
 
 /* Search bar and add friend input styles */
 .searchBox_d9c882, /* Threads popout */
-.searchBar__35e86 .searchBarComponent__35e86, /* Above friends list */
+.searchBar_e6b769 .searchBarComponent__35e86, /* Above friends list */
 .addFriendInputWrapper__72ba7 { /* Add friend input */
 	border: 1px solid rgba(var(--rgb-highlight), 20%);
 }
 .searchBox_d9c882:focus-within,
-.searchBar__35e86 .searchBarComponent__35e86:focus-within,
+.searchBar_e6b769 .searchBarComponent__35e86:focus-within,
 .addFriendInputWrapper__72ba7:focus-within {
 	border: 1px solid var(--highlight);
 }
 
 /* Guild list sidebar + notification/selection indicator */
-.guilds_c48ade, .item__58105 {
+.guilds__5e434, .item__58105 {
 	--background-primary: var(--background);
 	--background-secondary: transparent;
 	--header-primary: var(--highlight);
@@ -521,7 +523,7 @@ code {
 }
 
 /* Server folder background modifier on hover */
-.hiddenVisually__27f77.hover__48112, .visual-refresh .hiddenVisually__27f77.hover__48112 {
+.hiddenVisually_b18fe2.hover__48112, .visual-refresh .hiddenVisually_b18fe2.hover__48112 {
 	background-color: var(--background-mentioned);
 }
 
@@ -535,11 +537,16 @@ code {
 	background-color: transparent;
 }
 /* User switcher modal inputs */
-.modal__56d1c .input__0f084 {
+.modal__56d1c .input__0ed4f {
 	border: 1px solid rgba(var(--rgb-highlight), 20%);
 }
-.modal__56d1c .input__0f084:focus-within {
+.modal__56d1c .input__0ed4f:focus-within {
 	border: 1px solid var(--highlight);
+}
+
+/* Game card popout */
+.gameProfileModal__8e830 {
+	border: 1px solid rgba(var(--rgb-highlight), 50%);
 }
 
 
@@ -568,18 +575,24 @@ code {
 	background: transparent;
 }
 /* Outer layer */
-.userProfileOuterUnthemed_c69a7b {
+.user-profile-modal-v2:not(.custom-theme-background) {
 	--background-secondary-alt: var(--modal-background);
-	border: 1px solid var(--highlight);
-	background-color: transparent;
+	border: 1px solid rgba(var(--rgb-highlight), 60%);
+	background-color: var(--modal-background);
 }
 /* Outer layer of mini user popup (appears when clicking on a user's icon) */
-.userProfileOuterUnthemed_c69a7b.biteSizeOuter_c69a7b {
+.user-profile-popout:not(.custom-theme-background) {
+	border: 1px solid rgba(var(--rgb-highlight), 60%);
 	background-color: var(--modal-background);
 }
 /* Inner layer */
-.userProfileInner_c69a7b {
+.user-profile-modal-v2 > div {
 	--profile-body-background-color: transparent;
+	--background-surface-high: transparent;
+}
+/* Activity cards on user profile */
+.user-profile-modal-v2 .card__39ec2 {
+	border: 1px solid rgba(var(--rgb-highlight), 50%);
 }
 
 
@@ -646,7 +659,7 @@ div[style*="background-color: rgb(216, 58, 66)"] {
 
 /* ============ "Jump to" search bar and popout ============ */
 /* Search bar styles (above private chats)*/
-.searchBar__35e86 .searchBarComponent__35e86 {
+.searchBar_e6b769 .searchBarComponent__35e86 {
 	background-color: transparent;
 	border: 1px solid rgba(var(--rgb-highlight), 10%);
 }
@@ -739,7 +752,12 @@ div[style*="background-color: rgb(216, 58, 66)"] {
 
 
 /* ============ Server channel list and DM list ============ */
-/*  */
+/* Guild name header */
+.header_f37cb1 {
+	--header-primary: var(--highlight);
+}
+
+/* Not sure what these are, couldn't find them in the current Discord app */
 .interactive__972a0:active, .interactiveSelected__972a0 {
 	color: var(--text-link);
 }
@@ -752,7 +770,7 @@ div[style*="background-color: rgb(216, 58, 66)"] {
 	--channels-default: var(--highlight);
 }
 /* Set max width for category name */
-.container_cc72c1 .overflow__82b15 {
+.container_cc72c1 .overflow_b0dfc2 {
 	max-width: 10vw;
 }
 /* Left-side line */
@@ -972,7 +990,7 @@ div[style*="background-color: rgb(216, 58, 66)"] {
 .container_a45028, /* Apps search bar */
 .container_fea832, /* Sound search bar */
 .cardInput__8b579, /* Card input */
-.input__0f084, .input__0f084:hover, /* Generic input */
+.input__0ed4f, .input__0ed4f:hover, /* Generic input */
 .bd-search-wrapper { /* BD search bars */
 	border: 1px solid rgba(var(--rgb-highlight), 20%);
 	background-color: transparent;
@@ -980,27 +998,27 @@ div[style*="background-color: rgb(216, 58, 66)"] {
 .container_a45028:focus-within,
 .container_fea832:focus-within,
 .cardInput__8b579:focus-within,
-.input__0f084:focus,
+.input__0ed4f:focus,
 .bd-search-wrapper:focus-within {
 	border: 1px solid var(--highlight);
 }
 
 /* Active switch toggles */
-.container__87bf1.checked__87bf1, .bd-switch.bd-switch-checked .bd-switch-body {
+.container__3f21e.checked__3f21e, .bd-switch.bd-switch-checked .bd-switch-body {
 	background-color: var(--highlight) !important;
 	--switch-color: var(--highlight) !important;
 }
 /* Active swtich toggle ticks */
-.container__87bf1.checked__87bf1 .slider__87bf1 svg > path {
+.container__3f21e.checked__3f21e .slider__3f21e svg > path {
 	fill: var(--highlight);
 }
 
 /* Radio options (eg. language selection options) */
-.itemFilled__001a7 {
+.itemFilled__88a69 {
 	--background-secondary: var(--background-tertiary);
 }
 /* Selected radio option */
-.itemFilled__001a7[aria-checked=true] {
+.itemFilled__88a69[aria-checked=true] {
 	--background-modifier-selected: var(--background-mentioned);
 }
 
@@ -1030,7 +1048,7 @@ div[style*="background-color: rgb(216, 58, 66)"] {
 }
 
 /* Quest card */
-.questsCard__72a00 {
+.questsCard__12e16 {
 	background-color: var(--background-tertiary);
 	--background-secondary: transparent;
 }
@@ -1055,7 +1073,7 @@ div[style*="background-color: rgb(216, 58, 66)"] {
 }
 
 /* Logout button */
-.side_b3f026 .item_b3f026[tabindex='-1']:has(+ * + * + * .info__2debe) {
+.side_aa8da2 .item_aa8da2[tabindex='-1']:has(+ * + * + * .info__2debe) {
 	color: var(--close-button);
 	--background-modifier-hover: rgba(var(--rgb-close-button), 20%);
 }
@@ -1070,7 +1088,7 @@ div[style*="background-color: rgb(216, 58, 66)"] {
 
 /* Left sidebar bottom */
 .info__2debe:last-child::after {
-	content: "Dark Neon by xy0505 (2.2.2)";
+	content: "Dark Neon by xy0505 (2.2.3)";
 	font-size: 12px;
 	line-height: 16px;
 	color: var(--text);

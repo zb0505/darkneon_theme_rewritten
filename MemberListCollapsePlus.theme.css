@@ -1,7 +1,7 @@
 /**
  * @name Collapsible Members List Plus
  * @author xy0505
- * @version 2.2.0
+ * @version 2.2.1
  * @source https://github.com/zb0505/darkneon_theme_rewritten
  * @website https://github.com/zb0505/darkneon_theme_rewritten
  * @description A plugin to have a collapsible member list in servers. Should be used as @import to have it update automatically
@@ -16,7 +16,7 @@
 /* CUSTOMIZE TRANSITION TIME AND PROPERTIES HERE */
 :root {
 	--transition-time: .3s; /* Animation time */
-	--hidden-user-width: 60px; /* Collapsed width (should not be edited) */
+	--hidden-user-width: 50px; /* Collapsed width (should not be edited) */
 	--user-width: 265px; /* Opened width (should not be edited) */
 }
 /* END OF CUSTOMIZATION */
@@ -46,6 +46,16 @@
 	transition-duration: var(--transition-time);
 }
 
+/* Activity cards and their group title */
+.content_d125d2:not(:hover) > .membersGroup_c8ffbb:has(+ div:not([class])),
+.content_d125d2:not(:hover) > div:not([class]) {
+	height: 0px;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+/* Role group titles */
 .container_c8ffbb:not(:hover) .membersGroup_c8ffbb,
 .visual-refresh .container_c8ffbb:not(:hover) .membersGroup_c8ffbb,
 .container_c8ffbb:not(:hover) .container__0f2e8,
