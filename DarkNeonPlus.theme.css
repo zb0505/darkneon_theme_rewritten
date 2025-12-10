@@ -1,7 +1,7 @@
 /**
  * @name Dark Neon Plus
  * @author xy0505
- * @version 2.2.4
+ * @version 2.2.5
  * @source https://github.com/zb0505/darkneon_theme_rewritten
  * @website https://github.com/zb0505/darkneon_theme_rewritten
  * @description A dark theme with bright neon-y colors and a background image. Should be used via templates to have it update automatically (this has the same colors as the Blue template)
@@ -102,11 +102,12 @@
 	--background-mobile-primary: transparent;
 	--background-secondary: var(--background);
 	--background-mobile-secondary: var(--background);
-	--background-secondary-alt: var(--background);
+	--background-secondary-alt: var(--interactive-background-hover);
 	--background-tertiary: rgba(var(--rgb-background), 40%);
 	--background-accent: var(--background-message-automod-hover);
 	--background-floating: rgba(var(--rgb-background), 80%);
 	--background-nested-floating: transparent;
+	--background-brand: rgba(var(--rgb-highlight), 50%);
 	--card-primary-bg: var(--background-floating);
 	--user-profile-overlay-background: var(--background-tertiary);
 	/* Background modifiers */
@@ -166,14 +167,18 @@
 	--text-feedback-positive: var(--online-color);
 	/* Other colors */
 	--icon-primary: var(--highlight); /* Active channel icon */
+	--icon-strong: var(--highlight);
 	--icon-secondary: rgba(var(--rgb-highlight), 80%); /* Top left icons (hover) */
+	--icon-subtle: var(--icon-secondary);
 	--icon-tertiary: rgba(var(--rgb-highlight), 50%); /* Top left icons */
+	--icon-muted: var(--icon-tertiary);
 	--channel-icon: rgba(var(--rgb-highlight), 50%); /* Basic channel icon */
 	--channels-default: rgba(var(--rgb-highlight), 50%); /* Members' name */
 	--checkbox-border-checked: var(--highlight);
 	--checkbox-background-checked: rgba(var(--rgb-highlight), 75%);
 	--message-reacted-text: var(--highlight);
 	--message-reacted-background: rgba(var(--rgb-highlight), 20%);
+	--message-background-hover: var(--interactive-background-hover);
 	/* Red button regular styles */
 	--button-danger-background-disabled: rgba(var(--rgb-close-button), 20%);
 	--button-danger-background: rgba(var(--rgb-close-button), 20%);
@@ -264,6 +269,11 @@
 	--interactive-normal: rgba(var(--rgb-highlight), 50%);
 	--interactive-hover: rgba(var(--rgb-highlight), 100%);
 	--interactive-active: var(--highlight);
+	--interactive-text-active: var(--highlight);
+	--interactive-text-default: rgba(var(--rgb-highlight), 70%);
+	--interactive-text-hover: var(--highlight);
+	--interactive-background-selected: rgba(var(--rgb-highlight), 10%);
+	--interactive-background-hover: rgba(var(--rgb-highlight), 20%);
 	/* Status colors */
 	--status-danger: var(--dnd-color);
 	--status-warning: var(--afk-color);
@@ -1093,7 +1103,7 @@ div[style*="background-color: rgb(216, 58, 66)"] {
 
 /* Left sidebar bottom */
 .info__2debe:last-child::after {
-	content: "Dark Neon by xy0505 (2.2.4)";
+	content: "Dark Neon by xy0505 (2.2.5)";
 	font-size: 12px;
 	line-height: 16px;
 	color: var(--text);
