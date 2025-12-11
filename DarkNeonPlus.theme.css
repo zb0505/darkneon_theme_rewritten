@@ -177,8 +177,10 @@
 	--checkbox-border-checked: var(--highlight);
 	--checkbox-background-checked: rgba(var(--rgb-highlight), 75%);
 	--message-reacted-text: var(--highlight);
-	--message-reacted-background: rgba(var(--rgb-highlight), 20%);
+	--message-reacted-background: rgba(var(--rgb-highlight), 10%);
 	--message-background-hover: var(--interactive-background-hover);
+	--message-mentioned-background-default: var(--message-reacted-background);
+	--message-mentioned-background-hover: var(--message-background-hover);
 	/* Red button regular styles */
 	--button-danger-background-disabled: rgba(var(--rgb-close-button), 20%);
 	--button-danger-background: rgba(var(--rgb-close-button), 20%);
