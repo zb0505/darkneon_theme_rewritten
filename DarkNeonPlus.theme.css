@@ -120,6 +120,7 @@
 	--background-base-lower: transparent;
 	--background-base-lowest: transparent;
 	--background-mod-normal: rgba(var(--rgb-highlight), 10%);
+	--background-mod-strong: rgba(var(--rgb-highlight), 20%);
 	/* Modal and card backgrounds */
 	--modal-background: rgba(var(--rgb-background), 80%);
 	--modal-footer-background: transparent;
