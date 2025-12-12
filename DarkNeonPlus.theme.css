@@ -138,6 +138,8 @@
 	--logo-primary: var(--highlight);
 	--control-brand-foreground: var(--highlight);
 	--control-brand-foreground-new: var(--highlight);
+	--control-secondary-background-default: var(--message-reacted-background);
+	--control-secondary-background-hover: var(--message-background-hover);
 	--border-subtle: rgba(var(--rgb-highlight), 10%);
 	--app-border-frame: rgba(var(--rgb-highlight), 10%);
 	--border-faint: rgba(var(--rgb-highlight), 20%);
