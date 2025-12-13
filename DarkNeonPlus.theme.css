@@ -115,7 +115,7 @@
 	--background-modifier-hover: rgba(var(--rgb-highlight), 10%);
 	--background-modifier-active: rgba(var(--rgb-highlight), 30%);
 	--background-modifier-selected: var(--rgb-highlight);
-	--background-mod-subtle: rgba(var(--rgb-background), 20%);
+	--background-mod-subtle: rgba(var(--rgb-highlight), 20%);
 	--background-base-low: transparent;
 	--background-base-lower: transparent;
 	--background-base-lowest: transparent;
@@ -139,6 +139,10 @@
 	--logo-primary: var(--highlight);
 	--control-brand-foreground: var(--highlight);
 	--control-brand-foreground-new: var(--highlight);
+	--control-primary-background-default: rgba(var(--rgb-highlight), 60%);
+	--control-primary-background-hover: rgba(var(--rgb-highlight), 80%);
+	--control-primary-border-default: rgba(var(--rgb-highlight), 50%);
+	--control-primary-border-hover: var(--highlight);
 	--control-secondary-background-default: var(--message-reacted-background);
 	--control-secondary-background-hover: var(--message-background-hover);
 	--border-subtle: rgba(var(--rgb-highlight), 10%);
@@ -184,6 +188,13 @@
 	--message-background-hover: var(--interactive-background-hover);
 	--message-mentioned-background-default: var(--message-reacted-background);
 	--message-mentioned-background-hover: var(--message-background-hover);
+	/* Input colors */
+	--input-border-default: rgba(var(--rgb-highlight), 10%);
+	--input-border-hover: rgba(var(--rgb-highlight), 75%);
+	--input-border-active: var(--highlight);
+	--checkbox-background-default: transparent;
+	--checkbox-background-selected-default: rgba(var(--rgb-highlight), 80%);
+	--checkbox-border-default: rgba(var(--rgb-highlight), 20%);
 	/* Red button regular styles */
 	--button-danger-background-disabled: rgba(var(--rgb-close-button), 20%);
 	--button-danger-background: rgba(var(--rgb-close-button), 20%);
@@ -279,6 +290,8 @@
 	--interactive-text-hover: var(--highlight);
 	--interactive-background-selected: rgba(var(--rgb-highlight), 10%);
 	--interactive-background-hover: rgba(var(--rgb-highlight), 20%);
+	--interactive-icon-default: rgba(var(--rgb-highlight), 80%);
+	--interactive-icon-active: var(--highlight);
 	/* Status colors */
 	--status-danger: var(--dnd-color);
 	--status-warning: var(--afk-color);
@@ -373,6 +386,7 @@
 	--brand-500: var(--button-brand-background-hover); /* Icon color for partnered servers and color for checkboxes */
 	--green-360: rgba(from var(--online-color) r g b / 75%); /* Green verified icon for servers */
 	--primary-630: var(--modal-background); /* Modal backgrounds */
+	--opacity-blurple-16: rgba(var(--rgb-highlight), 20%); /* Add friend button when it's the selected tab */
 }
 
 /* ============ App base styles ============ */
@@ -523,6 +537,10 @@ code {
 .addFriendInputWrapper__72ba7:focus-within {
 	border: 1px solid var(--highlight);
 }
+/* Remove the inner input border for add friend input */
+.addFriendInputWrapper__72ba7 .input__72ba7 {
+	border: none !important;
+}
 
 /* Guild list sidebar + notification/selection indicator */
 .guilds__5e434, .item__58105 {
@@ -583,6 +601,11 @@ code {
 	color: var(--background)
 }
 
+/* Do not color friends tab names, usernames and activity title */
+.username__0a06e, .defaultColor__5345c, .userTagDiscriminator__63ed3, .userTagUsername__63ed3 {
+	--text-strong: var(--text);
+}
+
 
 /* ============ User profile popups ============ */
 /* Profile popout container */
@@ -608,6 +631,10 @@ code {
 /* Activity cards on user profile */
 .user-profile-modal-v2 .card__39ec2 {
 	border: 1px solid rgba(var(--rgb-highlight), 50%);
+}
+/* Do not color description in current user popout */
+.popoutContainer_ce8328 .descriptionClamp_f5f93a {
+	--text-strong: var(--text);
 }
 
 
@@ -772,9 +799,19 @@ div[style*="background-color: rgb(216, 58, 66)"] {
 	--header-primary: var(--highlight);
 }
 
+/* Guild and DM menu pills */
+.pill__1f388, .pill_e5445c {
+	--text-strong: var(--highlight);
+}
+
 /* Not sure what these are, couldn't find them in the current Discord app */
 .interactive__972a0:active, .interactiveSelected__972a0 {
 	color: var(--text-link);
+}
+
+/* Set margin bottom for the DM list container */
+.scroller__99e7c {
+	margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs));
 }
 
 /* Category container */
@@ -841,6 +878,11 @@ div[style*="background-color: rgb(216, 58, 66)"] {
 	color: var(--text) !important;
 }
 
+/* Message extra options menu emoji buttons */
+.button_f563df {
+	--background-mod-subtle: transparent;
+}
+
 /* Base element of chat text area */
 .channelTextArea_f75fb0 {
 	border: 1px solid rgba(var(--rgb-highlight), 20%);
@@ -866,6 +908,7 @@ div[style*="background-color: rgb(216, 58, 66)"] {
 .chatContent_f75fb0 .username_c19a55 {
 	--header-primary: var(--highlight);
 	--header-secondary: var(--highlight);
+	--text-strong: var(--highlight);
 }
 /* Reactions and reaction button */
 .reaction__23977 {
@@ -965,6 +1008,10 @@ div[style*="background-color: rgb(216, 58, 66)"] {
 /* New settings popup thing */
 .container_abd9a8 {
 	background-color: var(--modal-background);
+}
+/* Do not color server names in "share activity" settings */
+.myServersContainer__6de8b {
+	--text-strong: var(--text);
 }
 
 /* Filled button styles */
