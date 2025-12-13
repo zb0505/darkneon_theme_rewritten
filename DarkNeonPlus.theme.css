@@ -186,6 +186,7 @@
 	--message-reacted-text: var(--highlight);
 	--message-reacted-background: rgba(var(--rgb-highlight), 10%);
 	--message-background-hover: var(--interactive-background-hover);
+	--message-highlight-background-default: var(--message-reacted-background);
 	--message-mentioned-background-default: var(--message-reacted-background);
 	--message-mentioned-background-hover: var(--message-background-hover);
 	/* Input colors */
@@ -306,6 +307,7 @@
 	--profile-gradient-secondary-color: transparent;
 	/* Brand color overwrites */
 	--brand: var(--highlight);
+	--brand-10a: var(--message-background-hover);
 	--brand-100: var(--highlight);
 	--brand-130: var(--highlight);
 	--brand-160: var(--highlight);
