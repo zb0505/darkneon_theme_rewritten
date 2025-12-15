@@ -604,7 +604,7 @@ code {
 }
 
 /* Do not color friends tab names, usernames and activity title */
-.username__0a06e, .defaultColor__5345c, .userTagDiscriminator__63ed3, .userTagUsername__63ed3 {
+.username__0a06e, .defaultColor__5345c, .userTag__63ed3 {
 	--text-strong: var(--text);
 }
 
@@ -634,8 +634,8 @@ code {
 .user-profile-modal-v2 .card__39ec2 {
 	border: 1px solid rgba(var(--rgb-highlight), 50%);
 }
-/* Do not color description in current user popout */
-.popoutContainer_ce8328 .descriptionClamp_f5f93a {
+/* Do not color description or any headers in current user popout */
+.user-profile-popout .body__5be3e {
 	--text-strong: var(--text);
 }
 
