@@ -1,7 +1,7 @@
 /**
  * @name Dark Neon Plus
  * @author xy0505
- * @version 2.3.0
+ * @version 2.2.6
  * @source https://github.com/zb0505/darkneon_theme_rewritten
  * @website https://github.com/zb0505/darkneon_theme_rewritten
  * @description A dark theme with bright neon-y colors and a background image. Should be used via templates to have it update automatically (this has the same colors as the Blue template)
@@ -439,7 +439,7 @@ code {
 .fed6d32841cc2da2-header, /* GIF popout search background */
 .e6b7699ce8339e1c-searchBar, /* Search bar (above private chats) */
 .c8ffbb79449f399c-members, /* Server members sidebar */
-.a9e7064fdee8e9b0-searchResultsWrap, /* Server search sidebar */
+.a98f3b020416ad54-searchResultsWrap, /* Server search sidebar */
 .c8ffbb79449f399c-container, /* Unknown */
 .f75fb00fb7356cbe-channelTextArea, /* Chat input wrapper */
 ._740174f3d6a2c8fe-stackedBars, /* Reply bar container */
@@ -656,42 +656,43 @@ code {
 }
 
 /* Online dot and online cellphone markers */
-._44b0c28be7879b7b-wrapper rect[fill="#43a25a"], /* Online dot color */
+._44b0c28be7879b7b-wrapper rect[fill="#45a366"], /* Online dot color */
 ._44b0c28be7879b7b-wrapper rect[fill="#23a55a"], /* Online cellphone */
+.c9d15c8a962de3c8-icon path[fill="#45a366"], /* Currently playing icon */
 ._44b0c28be7879b7b-wrapper rect[mask*=online] {
 	fill: var(--online-color);
 }
-.a423bdd721ddcc83-status[style^="background-color: rgb(67, 162, 90);"] {
+.a423bdd721ddcc83-status[style^="background-color: rgb(69, 163, 102);"] {
 	background-color: var(--online-color) !important;
 }
 /* Online typing indicator (for some reason the .status class is missing in group chats) */
-div[style*="background-color: rgb(67, 162, 90)"] {
+div[style*="background-color: rgb(69, 163, 102)"] {
 	background-color: var(--online-color) !important;
 }
 
 /* Idle/AFK marker */
-._44b0c28be7879b7b-wrapper rect[fill="#ca9654"], /* AFK color */
+._44b0c28be7879b7b-wrapper rect[fill="#ffc04e"], /* AFK color */
 ._44b0c28be7879b7b-wrapper rect[mask*=idle] {
 	fill: var(--afk-color);
 }
-.a423bdd721ddcc83-status[style^="background-color: rgb(202, 150, 84);"] {
+.a423bdd721ddcc83-status[style^="background-color: rgb(255, 192, 78);"] {
 	background-color: var(--afk-color) !important;
 }
 /* Idle/AFK typing indicator (for some reason the .status class is missing in group chats) */
-div[style*="background-color: rgb(202, 150, 84)"] {
+div[style*="background-color: rgb(255, 192, 78)"] {
 	background-color: var(--afk-color) !important;
 }
 
 /* Do not disturb marker */
-._44b0c28be7879b7b-wrapper rect[fill="#d83a42"], /* DND color */
+._44b0c28be7879b7b-wrapper rect[fill="#da3e44"], /* DND color */
 ._44b0c28be7879b7b-wrapper rect[mask*=dnd] {
 	fill: var(--dnd-color);
 }
-.a423bdd721ddcc83-status[style^="background-color: rgb(216, 58, 66);"] {
+.a423bdd721ddcc83-status[style^="background-color: rgb(218, 62, 68);"] {
 	background-color: var(--dnd-color) !important;
 }
 /* DND typing indicator (for some reason the .status class is missing in group chats) */
-div[style*="background-color: rgb(216, 58, 66)"] {
+div[style*="background-color: rgb(218, 62, 68)"] {
 	background-color: var(--dnd-color) !important;
 }
 
@@ -769,10 +770,10 @@ div[style*="background-color: rgb(216, 58, 66)"] {
 	fill: var(--background);
 }
 /* Search input */
-._974928fe84ca9647-searchBar {
+.c322aadb96ff59c9-searchBar {
 	border: 1px solid rgba(var(--rgb-highlight), 20%);
 }
-._974928fe84ca9647-searchBar:focus-within {
+.c322aadb96ff59c9-searchBar:focus-within {
 	border: 1px solid var(--highlight);
 }
 
@@ -1001,7 +1002,7 @@ div[style*="background-color: rgb(216, 58, 66)"] {
 }
 
 /* Search result cards */
-._02a39cb2980ceaaf-searchResult:hover {
+._80bf8435713f6adb-searchResult:hover {
 	background-color: var(--background-mentioned-hover);
 }
 
@@ -1157,7 +1158,7 @@ div[style*="background-color: rgb(216, 58, 66)"] {
 
 /* Left sidebar bottom */
 ._2debea61131de3de-info:last-child::after {
-	content: "Dark Neon by xy0505 (2.3.0)";
+	content: "Dark Neon by xy0505 (2.2.6)";
 	font-size: 12px;
 	line-height: 16px;
 	color: var(--text);
