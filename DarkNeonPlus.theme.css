@@ -1,7 +1,7 @@
 /**
  * @name Dark Neon Plus
  * @author xy0505
- * @version 2.2.6
+ * @version 2.2.7
  * @source https://github.com/zb0505/darkneon_theme_rewritten
  * @website https://github.com/zb0505/darkneon_theme_rewritten
  * @description A dark theme with bright neon-y colors and a background image. Should be used via templates to have it update automatically (this has the same colors as the Blue template)
@@ -67,6 +67,9 @@
 .theme-light,
 .visual-refresh.theme-darker, .visual-refresh .theme-darker,
 .visual-refresh.theme-midnight, .visual-refresh .theme-midnight {
+	/* Version info text in settings menu */
+	--theme-version-info: "Dark Neon Theme 2.2.7";
+	--theme-variant: "Default";
 	/* Base colors */
 	--highlight: rgb(var(--rgb-highlight));
 	--background: rgb(var(--rgb-background));
@@ -196,6 +199,9 @@
 	--checkbox-background-default: transparent;
 	--checkbox-background-selected-default: rgba(var(--rgb-highlight), 80%);
 	--checkbox-border-default: rgba(var(--rgb-highlight), 20%);
+	--radio-background-selected-default: rgba(var(--rgb-highlight), 80%);
+	--radio-background-selected-hover: rgba(var(--rgb-highlight), 50%);
+	--switch-color: rgba(var(--rgb-highlight), 80%);
 	/* Red button regular styles */
 	--button-danger-background-disabled: rgba(var(--rgb-close-button), 20%);
 	--button-danger-background: rgba(var(--rgb-close-button), 20%);
@@ -638,6 +644,10 @@ code {
 .user-profile-popout ._5be3ef42f92174b2-body {
 	--text-strong: var(--text);
 }
+/* Status setter example text container in profile popout */
+.ab86098b36386ff7-outer:hover {
+	--text-default: var(--highlight);
+}
 
 
 /* ============ Availability markers ============ */
@@ -810,6 +820,11 @@ div[style*="background-color: rgb(218, 62, 68)"] {
 /* Not sure what these are, couldn't find them in the current Discord app */
 ._972a0d22c8afa7f0-interactive:active, ._972a0d22c8afa7f0-interactiveSelected {
 	color: var(--text-link);
+}
+/* Channel names */
+._2ea32c412048f708-wrapper {
+	--text-default: var(--highlight);
+	--text-muted: var(--text-link-low-saturation);
 }
 
 /* Set margin bottom for the DM list container */
@@ -1074,10 +1089,12 @@ div[style*="background-color: rgb(218, 62, 68)"] {
 }
 
 /* Active switch toggles */
-._3f21e80f8677ec40-container._3f21e80f8677ec40-checked, .bd-switch.bd-switch-checked .bd-switch-body {
-	background-color: var(--highlight) !important;
-	--switch-color: var(--highlight) !important;
+.a2827844fe91d55f-switchIndicator:not([style*="background-color: rgba(0, 0, 0, 0.12)"]), /* Mana switch component (off) */
+._3f21e80f8677ec40-container._3f21e80f8677ec40-checked,
+.bd-switch.bd-switch-checked .bd-switch-body {
+	background-color: var(--switch-color) !important;
 }
+
 /* Active swtich toggle ticks */
 ._3f21e80f8677ec40-container._3f21e80f8677ec40-checked ._3f21e80f8677ec40-slider svg > path {
 	fill: var(--highlight);
@@ -1156,11 +1173,10 @@ div[style*="background-color: rgb(218, 62, 68)"] {
 	background: transparent;
 }
 
-/* Left sidebar bottom */
-._2debea61131de3de-info:last-child::after {
-	content: "Dark Neon by xy0505 (2.2.6)";
-	font-size: 12px;
-	line-height: 16px;
-	color: var(--text);
+/* Add theme version number below other client version infos (like Discord and Electron version numbers) */
+._2debea61131de3de-compact > span:last-of-type::after {
+	content: var(--theme-version-info) " — " var(--theme-variant, "Default") " template";
 	text-transform: none;
+	display: block;
+	margin-top: var(--space-4);
 }

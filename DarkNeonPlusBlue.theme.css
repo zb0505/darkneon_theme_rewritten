@@ -1,7 +1,7 @@
 /**
  * @name Dark Neon Plus - Blue
  * @author xy0505
- * @version 2.2.0
+ * @version 2.2.7
  * @source https://github.com/zb0505/darkneon_theme_rewritten
  * @website https://github.com/zb0505/darkneon_theme_rewritten
  * @description A dark theme with bright neon-y colors
@@ -49,4 +49,7 @@
 	--background-blur: 0px;
 	/* Changes the background images brightness */
 	--background-brightness: 30%;
+
+	/* [DO NOT EDIT] This is the template variant displayed in settings */
+	--theme-variant: "Blue";
 }
