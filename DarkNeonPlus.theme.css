@@ -151,6 +151,7 @@
 	--border-subtle: rgba(var(--rgb-highlight), 10%);
 	--app-border-frame: rgba(var(--rgb-highlight), 10%);
 	--border-faint: rgba(var(--rgb-highlight), 20%);
+	--spine-default: rgba(var(--rgb-highlight), 20%);
 	/* Mention and message hover colors */
 	--background-mentioned: rgba(var(--rgb-highlight), 30%);
 	--background-mentioned-hover: rgba(var(--rgb-highlight), 20%);
