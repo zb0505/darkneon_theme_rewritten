@@ -1,7 +1,7 @@
 /**
  * @name Dark Neon Plus
  * @author xy0505
- * @version 2.2.8
+ * @version 2.2.9
  * @source https://github.com/zb0505/darkneon_theme_rewritten
  * @website https://github.com/zb0505/darkneon_theme_rewritten
  * @description A dark theme with bright neon-y colors and a background image. Should be used via templates to have it update automatically (this has the same colors as the Blue template)
@@ -68,7 +68,7 @@
 .visual-refresh.theme-darker, .visual-refresh .theme-darker,
 .visual-refresh.theme-midnight, .visual-refresh .theme-midnight {
 	/* Version info text in settings menu */
-	--theme-version-info: "Dark Neon Theme 2.2.8";
+	--theme-version-info: "Dark Neon Theme 2.2.9";
 	--theme-variant: "Default";
 	/* Base colors */
 	--highlight: rgb(var(--rgb-highlight));
@@ -113,6 +113,7 @@
 	--background-brand: rgba(var(--rgb-highlight), 50%);
 	--card-primary-bg: var(--background-floating);
 	--user-profile-overlay-background: var(--background-tertiary);
+	--badge-notification-background: rgba(var(--rgb-highlight), 75%);
 	/* Background modifiers */
 	--background-modifier-accent: rgba(var(--rgb-highlight), 20%);
 	--background-modifier-hover: rgba(var(--rgb-highlight), 10%);
