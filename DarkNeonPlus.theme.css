@@ -892,6 +892,11 @@ div[style*="background-color: rgb(218, 62, 68)"] {
 	background-color: var(--modal-background);
 }
 
+/* Stream "live" badge */
+.liveShapeRound_a7acae {
+	background-color: var(--dnd-color) !important;
+}
+
 
 /* ============ Chat components ============ */
 /* Main chat area with sidebars */
