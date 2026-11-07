@@ -1,7 +1,7 @@
 /**
  * @name Collapsible Members List Plus
  * @author xy0505
- * @version 2.2.9
+ * @version 2.3.0
  * @source https://github.com/zb0505/darkneon_theme_rewritten
  * @website https://github.com/zb0505/darkneon_theme_rewritten
  * @description A plugin to have a collapsible member list in servers. Should be used as @import to have it update automatically
@@ -29,26 +29,26 @@
 =======================================================================
 */
 /* Member list container collapsed */
-.container_c8ffbb, /* DM & Server */
-.visual-refresh .container_c8ffbb {
+.container_86es0b, /* DM & Server */
+.visual-refresh .container_86es0b {
 	transition-duration: var(--transition-time);
 }
-.container_c8ffbb:not(:hover),
-.visual-refresh .container_c8ffbb:not(:hover) {
+.container_86es0b:not(:hover),
+.visual-refresh .container_86es0b:not(:hover) {
 	width: var(--hidden-user-width);
 	justify-content: unset;
 	min-width: unset;
 }
 
 /* Role/group names and activity cards collapsed */
-.membersGroup_c8ffbb, .visual-refresh .membersGroup_c8ffbb,
-.container__0f2e8, .visual-refresh .container__0f2e8 {
+.membersGroup_86es0b, .visual-refresh .membersGroup_86es0b,
+.container_DKsPd0, .visual-refresh .container_DKsPd0 {
 	transition-duration: var(--transition-time);
 }
 
 /* Activity cards and their group title */
-.content_d125d2:not(:hover) > .membersGroup_c8ffbb:has(+ div:not([class])),
-.content_d125d2:not(:hover) > div:not([class]) {
+.contentInventoryContainer_DKsPd0:not(:hover) > .membersGroup_86es0b:has(+ div:not([class])),
+.contentInventoryContainer_DKsPd0:not(:hover) > div:not([class]) {
 	height: 0px;
 	padding: 0px;
 	margin: 0px;
@@ -56,10 +56,10 @@
 }
 
 /* Role group titles */
-.container_c8ffbb:not(:hover) .membersGroup_c8ffbb,
-.visual-refresh .container_c8ffbb:not(:hover) .membersGroup_c8ffbb,
-.container_c8ffbb:not(:hover) .container__0f2e8,
-.visual-refresh .container_c8ffbb:not(:hover) .container__0f2e8 {
+.container_86es0b:not(:hover) .membersGroup_86es0b,
+.visual-refresh .container_86es0b:not(:hover) .membersGroup_86es0b,
+.container_86es0b:not(:hover) .container_DKsPd0,
+.visual-refresh .container_86es0b:not(:hover) .container_DKsPd0 {
 	height: 0px;
 	padding: 0px;
 	margin: 0px;
@@ -67,17 +67,17 @@
 }
 
 /* Remove padding from user icons when collapsed */
-.container_c8ffbb:not(:hover) .member__5d473 {
+.container_86es0b:not(:hover) .member_86es0b {
 	margin: 0px;
 }
 
 
 /* Role/group names opened */
-.container_c8ffbb:hover .membersGroup_c8ffbb { /* DM & Server */
+.container_86es0b:hover .membersGroup_86es0b { /* DM & Server */
 	height: 40px;
 	padding-top: 24px;
 }
 /* Member list container opened */
-.container_c8ffbb:hover {/* DM & Server */
+.container_86es0b:hover {/* DM & Server */
 	width: var(--user-width);
 }
