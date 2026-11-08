@@ -336,8 +336,8 @@
 	--brand-460: var(--highlight);
 	--brand-500: var(--highlight);
 	--brand-530: var(--highlight);
-	--brand-560: var(--highlight);
-	--brand-600: var(--highlight);
+	--brand-560: rgba(var(--rgb-highlight), 80%);
+	--brand-600: rgba(var(--rgb-highlight), 70%);
 	--brand-630: var(--highlight);
 	--brand-660: var(--highlight);
 	--brand-700: var(--highlight);
@@ -365,8 +365,8 @@
 	--brand-experiment-460: var(--highlight);
 	--brand-experiment-500: var(--highlight);
 	--brand-experiment-530: var(--highlight);
-	--brand-experiment-560: var(--highlight);
-	--brand-experiment-600: var(--highlight);
+	--brand-experiment-560: rgba(var(--rgb-highlight), 80%);
+	--brand-experiment-600: rgba(var(--rgb-highlight), 70%);
 	--brand-experiment-630: var(--highlight);
 	--brand-experiment-660: var(--highlight);
 	--brand-experiment-700: var(--highlight);
@@ -400,6 +400,12 @@
 	--brand-experiment-95a: rgba(var(--rgb-highlight), 0.95);
 	/* Other colors */
 	--brand-500: var(--button-brand-background-hover); /* Icon color for partnered servers and color for checkboxes */
+	--brand-500-hsl: 189 calc(var(--saturation-factor, 1)*100%) 51%;
+	--brand-560-hsl: 189 calc(var(--saturation-factor, 1)*100%) 45%;
+	--brand-600-hsl: 189 calc(var(--saturation-factor, 1)*100%) 40%;
+	--brand-hsl: 189 calc(var(--saturation-factor, 1)*100%) 51%;
+	--control-brand-foreground: var(--highlight);
+	--control-brand-foreground-new: var(--highlight);
 	--green-360: rgba(from var(--online-color) r g b / 75%); /* Green verified icon for servers */
 	--primary-630: var(--modal-background); /* Modal backgrounds */
 	--opacity-blurple-16: rgba(var(--rgb-highlight), 20%); /* Add friend button when it's the selected tab */
@@ -444,7 +450,6 @@ code {
 .container_zrUwGA, /* Wrapper of right-side area (eg. friends and activities container) */
 .tabBody_zrUwGA, /* Wrapper of right-side area (eg. friends and activities container) */
 .nowPlayingColumn_zrUwGA, /* Activities sidebar on friends tab */
-.popout_uFkqU2, /* Activity card popouts */
 .addFriendInputWrapper_jF-DiS, /* Add friend input */
 .chat_z_gUBg, /* Main chat wrapper */
 .chatContent_z_gUBg, /* Chat content */
@@ -463,8 +468,6 @@ code {
 .container_rE8-46, /* Unknown */
 .privateChannels_u88IQl, /* Private channels container */
 .scroller_5dqHTG, /* Unknown */
-.container_dvN-MP.modal__F9ieB, /* Settings menu modal container */
-.standardSidebarView_c25c31, /* Settings menu view */
 .sidebarRegion_dvN-MP, /* Settings menu left sidebar */
 .contentRegion_dvN-MP, /* Settings menu right side */
 .wrapper_XpIUHy, /* Slash command popout left side bot icon container */
@@ -475,6 +478,23 @@ code {
 .user-profile-modal-v2:not(.custom-theme-background) > div /* User profile inner layer */ {
 	background: transparent !important;
 	background-color: rgba(0, 0, 0, 0) !important
+}
+
+/* Settings modal container - semi-transparent for readability */
+.container_dvN-MP.modal__F9ieB,
+.standardSidebarView_c25c31,
+[class*="standardSidebarView_"] {
+	background-color: rgba(var(--rgb-background), 75%) !important;
+	border: 1px solid rgba(var(--rgb-highlight), 30%) !important;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.8) !important;
+	border-radius: 8px;
+}
+.sidebarRegion_dvN-MP,
+.contentRegion_dvN-MP,
+[class*="sidebarRegion_"],
+[class*="contentRegion_"] {
+	background: transparent !important;
+	background-color: transparent !important;
 }
 
 /* People list, current user controls and profile outer layer */
@@ -498,12 +518,136 @@ code {
 .gameWrapper_8eCwJY {
 	background: transparent !important;
 	background-color: rgba(0, 0, 0, 0) !important;
-	border: none !important;
 }
 
-/* Checkbox styles (eg. in create group chat) */
-.checkbox_8b5Lkq {
+/* Checkbox rows - transparent background with standard subtle hover */
+[role="checkbox"],
+.clickableRow_lQvWfQ,
+.row_8b5Lkq,
+.checkboxWrapper_8b5Lkq {
+	background-color: transparent !important;
+	background: transparent !important;
+}
+[role="checkbox"]:hover,
+.clickableRow_lQvWfQ:hover,
+.row_8b5Lkq:hover,
+.checkboxWrapper_8b5Lkq:hover {
+	background-color: var(--background-modifier-hover) !important;
+}
+[role="checkbox"][aria-checked="true"],
+.selectedRow_lQvWfQ {
+	background-color: transparent !important;
+	background: transparent !important;
+}
+[role="checkbox"][aria-checked="true"]:hover,
+.selectedRow_lQvWfQ:hover {
+	background-color: var(--background-modifier-hover) !important;
+}
+
+/* Checkbox elements token overrides */
+.checkbox_8b5Lkq,
+.checkbox_lQvWfQ,
+.checkbox_SZxRc8,
+.checkbox_nnjG9R,
+.checkbox_M3qk4j,
+.box_8b5Lkq,
+.checkboxIndicator_vTUVyc,
+[class*="checkbox_"]:not([class*="switch"]):not([class*="slider"]) {
 	--brand-500: var(--highlight);
+	--brand-560: rgba(var(--rgb-highlight), 80%);
+	--brand-600: rgba(var(--rgb-highlight), 70%);
+	--brand-experiment-500: var(--highlight);
+	--brand-experiment-560: rgba(var(--rgb-highlight), 80%);
+	--brand-experiment-600: rgba(var(--rgb-highlight), 70%);
+	--control-brand-foreground: var(--highlight);
+	--control-brand-foreground-new: var(--highlight);
+	--checkbox-background-checked: var(--highlight);
+	--checkbox-border-checked: var(--highlight);
+}
+
+/* Checked checkbox squares */
+[role="checkbox"][aria-checked="true"] [class*="checkbox_"],
+[role="checkbox"][aria-checked="true"] [class*="box_"],
+[role="checkbox"][aria-checked="true"] [class*="checkboxIndicator_"],
+.selectedRow_lQvWfQ .checkbox_lQvWfQ,
+.selectedRow_lQvWfQ [class*="checkbox_"],
+.checkbox_8b5Lkq.checked_8b5Lkq,
+.box_8b5Lkq.checked_8b5Lkq,
+.checked_8b5Lkq .checkbox_8b5Lkq,
+.checked_8b5Lkq .box_8b5Lkq,
+.checkbox_SZxRc8.checkboxSelected_SZxRc8,
+.checkboxSelected_SZxRc8,
+[class*="checkboxSelected_"],
+.checkbox_nnjG9R[aria-checked="true"],
+[class*="checkbox_"][class*="checked_"]:not([class*="switch"]):not([class*="slider"]) {
+	background-color: var(--highlight) !important;
+	border-color: var(--highlight) !important;
+}
+
+/* Checked checkbox squares on hover (prevents blurple) */
+[role="checkbox"][aria-checked="true"]:hover [class*="checkbox_"],
+[role="checkbox"][aria-checked="true"]:hover [class*="box_"],
+[role="checkbox"][aria-checked="true"]:hover [class*="checkboxIndicator_"],
+[role="checkbox"]:hover [class*="checkbox_"][class*="checked_"],
+.selectedRow_lQvWfQ:hover .checkbox_lQvWfQ,
+.clickableRow_lQvWfQ:hover .checkbox_lQvWfQ,
+.selectedRow_lQvWfQ:hover [class*="checkbox_"],
+.clickableRow_lQvWfQ:hover [class*="checkbox_"],
+[class*="selectedRow"]:hover [class*="checkbox_"],
+[class*="clickableRow"]:hover [class*="checkbox_"],
+.row_8b5Lkq:hover .checkbox_8b5Lkq.checked_8b5Lkq,
+.row_8b5Lkq:hover .box_8b5Lkq.checked_8b5Lkq,
+.checkboxWrapper_8b5Lkq:hover .checkbox_8b5Lkq.checked_8b5Lkq,
+.checkboxWrapper_8b5Lkq:hover .box_8b5Lkq.checked_8b5Lkq,
+[class*="row_"]:hover [class*="checkbox_"][class*="checked_"]:not([class*="switch"]),
+[class*="checkboxWrapper"]:hover [class*="checkbox_"][class*="checked_"]:not([class*="switch"]),
+.checkbox_8b5Lkq.checked_8b5Lkq:hover,
+.box_8b5Lkq.checked_8b5Lkq:hover,
+.checkbox_lQvWfQ:hover,
+.checkboxSelected_SZxRc8:hover,
+[class*="checkboxSelected_"]:hover,
+[class*="checkbox_"][class*="checked_"]:not([class*="switch"]):hover {
+	background-color: rgba(var(--rgb-highlight), 80%) !important;
+	border-color: rgba(var(--rgb-highlight), 80%) !important;
+}
+
+/* Unchecked checkbox squares */
+[role="checkbox"]:not([aria-checked="true"]) [class*="checkbox_"],
+[role="checkbox"]:not([aria-checked="true"]) [class*="box_"],
+.checkbox_8b5Lkq:not(.checked_8b5Lkq),
+.box_8b5Lkq:not(.checked_8b5Lkq),
+.checkbox_lQvWfQ:not(.selectedRow_lQvWfQ .checkbox_lQvWfQ),
+.checkbox_SZxRc8:not(.checkboxSelected_SZxRc8),
+.checkbox_nnjG9R:not([aria-checked="true"]) {
+	background-color: transparent !important;
+	border-color: rgba(var(--rgb-highlight), 20%) !important;
+}
+
+/* Unchecked checkbox squares on hover */
+[role="checkbox"]:not([aria-checked="true"]):hover [class*="checkbox_"],
+[role="checkbox"]:not([aria-checked="true"]):hover [class*="box_"],
+.row_8b5Lkq:hover .checkbox_8b5Lkq:not(.checked_8b5Lkq),
+.row_8b5Lkq:hover .box_8b5Lkq:not(.checked_8b5Lkq),
+.checkboxWrapper_8b5Lkq:hover .checkbox_8b5Lkq:not(.checked_8b5Lkq),
+.checkboxWrapper_8b5Lkq:hover .box_8b5Lkq:not(.checked_8b5Lkq),
+.clickableRow_lQvWfQ:hover .checkbox_lQvWfQ:not(.selectedRow_lQvWfQ .checkbox_lQvWfQ),
+.checkbox_8b5Lkq:not(.checked_8b5Lkq):hover,
+.box_8b5Lkq:not(.checked_8b5Lkq):hover {
+	background-color: rgba(var(--rgb-highlight), 10%) !important;
+	border-color: var(--highlight) !important;
+}
+
+/* White checkmark inside checkbox square */
+[role="checkbox"] [class*="checkbox_"] svg path,
+[role="checkbox"] [class*="box_"] svg path,
+[role="checkbox"] [class*="checkboxIndicator_"] svg path,
+.checkbox_lQvWfQ svg path,
+.checkbox_8b5Lkq svg path,
+.box_8b5Lkq svg path,
+.checkbox_SZxRc8 svg path,
+.checkbox_nnjG9R svg path {
+	fill: #ffffff !important;
+	stroke: #ffffff !important;
 }
 
 /* Tooltip styles */
@@ -528,8 +672,17 @@ code {
 .menu_M3qk4j:not(#account, #status) .focused_M3qk4j {
 	--header-primary: var(--highlight);
 }
-.backdrop_NOlkhE {
-	background-color: var(--background-floating) !important;
+/* Lighten backdrop behind fullscreen layer / settings modal */
+[class*="backdrop_"],
+.backdrop_zBOVVJ,
+.backdrop_NOlkhE,
+.backdrop_UQqFnR,
+.backdrop_JHO5jQ,
+.backdrop_S_xUx6,
+.backdrop_jCEr5v,
+.backdrop_JeyAv- {
+	background-color: rgba(0, 0, 0, 0.3) !important;
+	opacity: 1 !important;
 }
 
 /* Soundboard popout */
@@ -676,8 +829,17 @@ code {
 }
 
 /* Do not color friends tab names, usernames and activity title */
-.username_2i8Bfm, .defaultColor_MMUIw6, .userTag_C2XpHA {
+.username_jPuNMC,
+.userInfo_jPuNMC .username_jPuNMC,
+.peopleListItem_y75PxA .username_jPuNMC,
+.peopleListItem_y75PxA [class*="username_"],
+.peopleListItem_y75PxA .text_jPuNMC,
+.discordTag_jPuNMC,
+.username_2i8Bfm,
+.defaultColor_MMUIw6,
+.userTag_C2XpHA {
 	--text-strong: var(--text);
+	color: var(--text) !important;
 }
 
 
@@ -1138,10 +1300,26 @@ div[style*="background-color: rgb(218, 62, 68)"] {
 	color: var(--highlight);
 	fill: var(--highlight)
 }
-/* Unread mentions bar (not tested) */
-.bar_t1P8Sn {
-	background-color: var(--highlight);
-	color: var(--background)
+/* Unread channel pill indicator (top and bottom of channel list) */
+.bar_oJAkDB,
+.unreadBar_ysO7Gy,
+.container_oJAkDB .bar_oJAkDB,
+.unreadTop_ysO7Gy .bar_oJAkDB,
+.unreadBottom_ysO7Gy .bar_oJAkDB,
+.bar_t1P8Sn,
+.unreadMentionsBar_5dqHTG {
+	background-color: rgba(var(--rgb-highlight), 25%) !important;
+	border: 1px solid var(--highlight) !important;
+	box-shadow: 0 0 10px rgba(var(--rgb-highlight), 30%) !important;
+	color: var(--highlight) !important;
+}
+
+.text_oJAkDB,
+.bar_oJAkDB .text_oJAkDB,
+.unreadBar_ysO7Gy .text_oJAkDB,
+.bar_t1P8Sn .barText_t1P8Sn,
+.unreadMentionsBar_5dqHTG * {
+	color: var(--highlight) !important;
 }
 
 /* Emoji and GIF popout container */
@@ -1200,9 +1378,25 @@ div[style*="background-color: rgb(218, 62, 68)"] {
 	--input-background: var(--background-tertiary);
 }
 /* Dropdown list styles */
-.popout_uFkqU2 {
+.popout_uFkqU2,
+[class*="selectPopout_"],
+[class*="popout_"][class*="select_"] {
+	background-color: var(--background-floating) !important;
+	border: 1px solid rgba(var(--rgb-highlight), 40%) !important;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7) !important;
 	--background-secondary: var(--background-floating);
 	--background-modifier-selected: var(--background-mentioned);
+}
+
+.popout_uFkqU2 .option_uFkqU2 {
+	background-color: transparent;
+}
+.popout_uFkqU2 .option_uFkqU2:hover,
+.popout_uFkqU2 .option_uFkqU2.focused_uFkqU2 {
+	background-color: var(--background-modifier-hover) !important;
+}
+.popout_uFkqU2 .option_uFkqU2[aria-selected="true"] {
+	background-color: var(--background-modifier-selected) !important;
 }
 
 /* Sound selector input */
@@ -1232,14 +1426,79 @@ div[style*="background-color: rgb(218, 62, 68)"] {
 
 /* Active switch toggles */
 .switchIndicator_9AraPt:not([style*="background-color: rgba(0, 0, 0, 0.12)"]), /* Mana switch component (off) */
-.container_9AraPt.checked_8b5Lkq,
+[role="switch"][aria-checked="true"],
+.container_9AraPt:has(input:checked) .switchIndicator_9AraPt,
+.container_9AraPt[aria-checked="true"] .switchIndicator_9AraPt,
+[role="switch"][aria-checked="true"] .switchIndicator_9AraPt,
 .bd-switch.bd-switch-checked .bd-switch-body {
 	background-color: var(--switch-color) !important;
 }
 
-/* Active swtich toggle ticks */
-.container_9AraPt.checked_8b5Lkq .slider_OnqacX svg > path {
-	fill: var(--highlight);
+/* Discord native switch thumb positioning */
+.thumb_9AraPt {
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Active switch toggle tick (checkmark) in Discord native switches via SVG mask */
+.switchIndicator_9AraPt:not([style*="background-color: rgba(0, 0, 0, 0.12)"]) .thumb_9AraPt:not(:has(svg))::after,
+.container_9AraPt:has(input:checked) .thumb_9AraPt:not(:has(svg))::after,
+.container_9AraPt[aria-checked="true"] .thumb_9AraPt:not(:has(svg))::after,
+[role="switch"][aria-checked="true"] .thumb_9AraPt:not(:has(svg))::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-color: var(--highlight) !important;
+	-webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' d='M7.89561 14.8538L6.30462 13.2629L14.3099 5.25755L15.9009 6.84854L7.89561 14.8538Z'/%3E%3Cpath fill='%23000' d='M4.08643 11.0903L5.67742 9.49929L9.4485 13.2704L7.85751 14.8614L4.08643 11.0903Z'/%3E%3C/svg%3E");
+	mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' d='M7.89561 14.8538L6.30462 13.2629L14.3099 5.25755L15.9009 6.84854L7.89561 14.8538Z'/%3E%3Cpath fill='%23000' d='M4.08643 11.0903L5.67742 9.49929L9.4485 13.2704L7.85751 14.8614L4.08643 11.0903Z'/%3E%3C/svg%3E");
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-position: center;
+	-webkit-mask-size: contain;
+	mask-size: contain;
+	pointer-events: none;
+}
+
+/* Inactive switch toggle cross ('X') in Discord native switches via SVG mask */
+.switchIndicator_9AraPt[style*="background-color: rgba(0, 0, 0, 0.12)"] .thumb_9AraPt:not(:has(svg))::after,
+.container_9AraPt:not(:has(input:checked)):not([aria-checked="true"]) .thumb_9AraPt:not(:has(svg))::after,
+[role="switch"][aria-checked="false"] .thumb_9AraPt:not(:has(svg))::after,
+[role="switch"]:not([aria-checked="true"]) .thumb_9AraPt:not(:has(svg))::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.4) !important;
+	-webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' d='M5.13231 6.72963L6.7233 5.13864L14.855 13.2704L13.264 14.8614L5.13231 6.72963Z'/%3E%3Cpath fill='%23000' d='M13.2704 5.13864L14.8614 6.72963L6.72963 14.8614L5.13864 13.2704L13.2704 5.13864Z'/%3E%3C/svg%3E");
+	mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' d='M5.13231 6.72963L6.7233 5.13864L14.855 13.2704L13.264 14.8614L5.13231 6.72963Z'/%3E%3Cpath fill='%23000' d='M13.2704 5.13864L14.8614 6.72963L6.72963 14.8614L5.13864 13.2704L13.2704 5.13864Z'/%3E%3C/svg%3E");
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-position: center;
+	-webkit-mask-size: contain;
+	mask-size: contain;
+	pointer-events: none;
+}
+
+/* Fallback if Discord native switch has inline SVG */
+.container_9AraPt:has(input:checked) .thumb_9AraPt svg path,
+.switchIndicator_9AraPt:has(input:checked) .thumb_9AraPt svg path,
+.container_9AraPt[aria-checked="true"] .thumb_9AraPt svg path,
+[role="switch"][aria-checked="true"] .thumb_9AraPt svg path,
+.container_9AraPt:has(input:checked) svg path,
+.switchIndicator_9AraPt:has(input:checked) svg path,
+[role="switch"][aria-checked="true"] svg path {
+	fill: var(--highlight) !important;
+	stroke: var(--highlight) !important;
+	color: var(--highlight) !important;
+}
+
+.container_9AraPt:not(:has(input:checked)):not([aria-checked="true"]) .thumb_9AraPt svg path,
+[role="switch"]:not([aria-checked="true"]) .thumb_9AraPt svg path {
+	fill: rgba(0, 0, 0, 0.4) !important;
+	stroke: rgba(0, 0, 0, 0.4) !important;
+	color: rgba(0, 0, 0, 0.4) !important;
 }
 
 /* Radio options (eg. language selection options) */
@@ -1338,12 +1597,20 @@ div[style*="background-color: rgb(218, 62, 68)"] {
 .vc-form-switch-wrapper {
 	--switch-background: rgba(var(--rgb-background), 50%);
 }
-.vc-switch-slider {
-	border: 1px solid rgba(var(--rgb-highlight), 30%);
+
+/* Active switch toggle tick in Vencord */
+.vc-switch-checked .vc-switch-slider svg,
+.vc-switch-checked .vc-switch-slider path,
+.vc-switch-slider:has(input:checked) svg,
+.vc-switch-slider:has(input:checked) path {
+	fill: var(--highlight) !important;
+	color: var(--highlight) !important;
 }
-.vc-switch-checked .vc-switch-slider,
-.vc-switch-slider:has(input:checked) {
-	background-color: var(--highlight) !important;
+/* Inactive switch toggle cross in Vencord */
+.vc-switch-container:not(.vc-switch-checked) .vc-switch-slider svg,
+.vc-switch-container:not(.vc-switch-checked) .vc-switch-slider path {
+	fill: rgba(0, 0, 0, 0.4) !important;
+	color: rgba(0, 0, 0, 0.4) !important;
 }
 
 /* Vencord buttons */
