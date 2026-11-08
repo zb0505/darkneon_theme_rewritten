@@ -400,12 +400,6 @@
 	--brand-experiment-95a: rgba(var(--rgb-highlight), 0.95);
 	/* Other colors */
 	--brand-500: var(--button-brand-background-hover); /* Icon color for partnered servers and color for checkboxes */
-	--brand-500-hsl: 189 calc(var(--saturation-factor, 1)*100%) 51%;
-	--brand-560-hsl: 189 calc(var(--saturation-factor, 1)*100%) 45%;
-	--brand-600-hsl: 189 calc(var(--saturation-factor, 1)*100%) 40%;
-	--brand-hsl: 189 calc(var(--saturation-factor, 1)*100%) 51%;
-	--control-brand-foreground: var(--highlight);
-	--control-brand-foreground-new: var(--highlight);
 	--green-360: rgba(from var(--online-color) r g b / 75%); /* Green verified icon for servers */
 	--primary-630: var(--modal-background); /* Modal backgrounds */
 	--opacity-blurple-16: rgba(var(--rgb-highlight), 20%); /* Add friend button when it's the selected tab */
@@ -518,6 +512,42 @@ code {
 .gameWrapper_8eCwJY {
 	background: transparent !important;
 	background-color: rgba(0, 0, 0, 0) !important;
+}
+
+/* Quest bar in sidebar panels (collapsed & expanded) */
+.wrapper_9jC23S,
+.wrapperAccepted_9jC23S,
+.questAcceptedContent_ZzrVHV,
+.postEnrollmentBackground_ZzrVHV,
+.postEnrollmentBackgroundCollapsed_ZzrVHV,
+.postEnrollmentBackgroundExpanded_ZzrVHV,
+.contentCollapsedBackgroundWrapper_ZzrVHV,
+.contentCollapsedBackground_ZzrVHV,
+.questAcceptedHeader_ja4B1_,
+.questProgressWrapper_TTqPW3,
+.questPromoContent_ZzrVHV,
+.legibilityGradient_ZzrVHV,
+[class*="wrapperAccepted_"],
+[class*="questAcceptedContent_"],
+[class*="postEnrollmentBackground"],
+[class*="contentCollapsedBackground"],
+[class*="questAcceptedHeader_"],
+[class*="questProgressWrapper_"],
+[class*="questPromoContent_"],
+[class*="legibilityGradient_"] {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+}
+[class*="contentCollapsedBackground"]::before,
+[class*="contentCollapsedBackground"]::after,
+[class*="postEnrollmentBackground"]::before,
+[class*="postEnrollmentBackground"]::after,
+[class*="questAcceptedContent_"]::before,
+[class*="questAcceptedContent_"]::after {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
 }
 
 /* Checkbox rows - transparent background with standard subtle hover */
@@ -1426,10 +1456,8 @@ div[style*="background-color: rgb(218, 62, 68)"] {
 
 /* Active switch toggles */
 .switchIndicator_9AraPt:not([style*="background-color: rgba(0, 0, 0, 0.12)"]), /* Mana switch component (off) */
-[role="switch"][aria-checked="true"],
 .container_9AraPt:has(input:checked) .switchIndicator_9AraPt,
 .container_9AraPt[aria-checked="true"] .switchIndicator_9AraPt,
-[role="switch"][aria-checked="true"] .switchIndicator_9AraPt,
 .bd-switch.bd-switch-checked .bd-switch-body {
 	background-color: var(--switch-color) !important;
 }
@@ -1444,8 +1472,7 @@ div[style*="background-color: rgb(218, 62, 68)"] {
 /* Active switch toggle tick (checkmark) in Discord native switches via SVG mask */
 .switchIndicator_9AraPt:not([style*="background-color: rgba(0, 0, 0, 0.12)"]) .thumb_9AraPt:not(:has(svg))::after,
 .container_9AraPt:has(input:checked) .thumb_9AraPt:not(:has(svg))::after,
-.container_9AraPt[aria-checked="true"] .thumb_9AraPt:not(:has(svg))::after,
-[role="switch"][aria-checked="true"] .thumb_9AraPt:not(:has(svg))::after {
+.container_9AraPt[aria-checked="true"] .thumb_9AraPt:not(:has(svg))::after {
 	content: "";
 	position: absolute;
 	inset: 0;
@@ -1463,9 +1490,7 @@ div[style*="background-color: rgb(218, 62, 68)"] {
 
 /* Inactive switch toggle cross ('X') in Discord native switches via SVG mask */
 .switchIndicator_9AraPt[style*="background-color: rgba(0, 0, 0, 0.12)"] .thumb_9AraPt:not(:has(svg))::after,
-.container_9AraPt:not(:has(input:checked)):not([aria-checked="true"]) .thumb_9AraPt:not(:has(svg))::after,
-[role="switch"][aria-checked="false"] .thumb_9AraPt:not(:has(svg))::after,
-[role="switch"]:not([aria-checked="true"]) .thumb_9AraPt:not(:has(svg))::after {
+.container_9AraPt:not(:has(input:checked)):not([aria-checked="true"]) .thumb_9AraPt:not(:has(svg))::after {
 	content: "";
 	position: absolute;
 	inset: 0;
@@ -1485,17 +1510,14 @@ div[style*="background-color: rgb(218, 62, 68)"] {
 .container_9AraPt:has(input:checked) .thumb_9AraPt svg path,
 .switchIndicator_9AraPt:has(input:checked) .thumb_9AraPt svg path,
 .container_9AraPt[aria-checked="true"] .thumb_9AraPt svg path,
-[role="switch"][aria-checked="true"] .thumb_9AraPt svg path,
 .container_9AraPt:has(input:checked) svg path,
-.switchIndicator_9AraPt:has(input:checked) svg path,
-[role="switch"][aria-checked="true"] svg path {
+.switchIndicator_9AraPt:has(input:checked) svg path {
 	fill: var(--highlight) !important;
 	stroke: var(--highlight) !important;
 	color: var(--highlight) !important;
 }
 
-.container_9AraPt:not(:has(input:checked)):not([aria-checked="true"]) .thumb_9AraPt svg path,
-[role="switch"]:not([aria-checked="true"]) .thumb_9AraPt svg path {
+.container_9AraPt:not(:has(input:checked)):not([aria-checked="true"]) .thumb_9AraPt svg path {
 	fill: rgba(0, 0, 0, 0.4) !important;
 	stroke: rgba(0, 0, 0, 0.4) !important;
 	color: rgba(0, 0, 0, 0.4) !important;
